@@ -1,0 +1,12 @@
+[
+  { "name": "HTML", "value": 60 },
+  { "name": "CSS", "value": 44 },
+  { "name": "scss", "value": 44 },
+  { "name": "JavaScript", "value": 90 },
+  { "name": "Node", "value": 80 },
+  { "name": "Git", "value": 10 },
+  { "name": "React", "value": 50 },
+  { "name": "Preact", "value": 50 },
+  { "name": "VS code", "value": 15 },
+  { "name": "Pair programming", "value": 60 }
+]

@@ -1,0 +1,101 @@
+:root {
+  --caption-width: 600px;
+  --caption-height: 50vh;
+  --caption-item-margin: 15px;
+  --caption-init-translate: translateX(
+    calc(-1 * (50vw + (var(--caption-width) / 2)))
+  );
+  --caption-init-translate-2: translateX(
+    calc(50vw + (var(--caption-width) / 2))
+  );
+  --caption-final-translate: translateX(0px);
+  --caption-final-translate-2: translateX(15px);
+}
+.aligner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.aligner__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.caption {
+  padding-top: 2px;
+  padding-left: 2px;
+  opacity: 0;
+  max-width: calc(var(--caption-width) - var(--caption-item-margin));
+  height: var(--caption-height);
+  min-height: 300px;
+}
+.transition {
+  transition-property: all;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  transform: var(--caption-init-translate);
+}
+
+.transition:nth-of-type(2) {
+  transform: var(--caption-init-translate-2);
+}
+
+.fadein {
+  opacity: 1;
+  transform: var(--caption-final-translate);
+}
+
+.fadein:nth-of-type(2) {
+  transform: var(--caption-final-translate-2);
+}
+
+.caption__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  height: var(--caption-height);
+  min-height: 300px;
+  border-left: 1px solid rgb(136, 146, 176);
+  background-color: #ffffff;
+  opacity: 0.8;
+}
+
+.caption__item > h1,
+.caption__item > h2,
+.caption__item > h3,
+.caption__item > p {
+  color: #000000;
+  font-size: 18pt;
+  margin: 6px var(--caption-item-margin);
+  text-align: left;
+  transform: translateX(calc(-1 * var(--caption-width)));
+  transition-property: transform;
+  transition-duration: 400ms;
+  transition-timing-function: ease-out;
+  transition-delay: 600ms;
+}
+
+.caption__item > h1 {
+  font-size: 12pt;
+  font-weight: normal;
+}
+
+.caption__item > h2 {
+  font-size: 28pt;
+}
+
+.caption__item > h3 {
+  font-size: 25pt;
+  font-weight: normal;
+  color: rgb(136, 146, 176);
+}
+
+.caption.fadein .caption__item > h1,
+.caption.fadein .caption__item > h2,
+.caption.fadein .caption__item > h3,
+.caption.fadein .caption__item > p {
+  transform: translateX(0);
+}
