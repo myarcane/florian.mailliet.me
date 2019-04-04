@@ -25,7 +25,6 @@
     "gatsby-transformer-remark": "^2.3.4",
     "gatsby-transformer-sharp": "^2.1.17",
     "install": "^0.12.2",
-    "intersection-observer": "^0.5.1",
     "npm": "^6.9.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",

@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import Img from "gatsby-image"
-import "intersection-observer"
 import "./hero.css"
 
 class Hero extends Component {
@@ -15,26 +14,32 @@ class Hero extends Component {
   }
 
   componentDidMount() {
-    const node = this.screenNode.current
+    if ("IntersectionObserver" in window) {
+      const node = this.screenNode.current
 
-    const options = {
-      root: null, // relative to document viewport
-      rootMargin: "0px", // margin around root. Values are similar to css property. Unitless values not allowed
-      threshold: 0.2, // visible amount of item shown in relation to root
-    }
+      const options = {
+        root: null, // relative to document viewport
+        rootMargin: "0px", // margin around root. Values are similar to css property. Unitless values not allowed
+        threshold: 0.2, // visible amount of item shown in relation to root
+      }
 
-    const onChange = (changes, observer) => {
-      changes.forEach(change => {
-        if (change.intersectionRatio >= 0.2) {
-          this.setState({
-            isIntersecting: true,
-          })
-        }
+      const onChange = (changes, observer) => {
+        changes.forEach(change => {
+          if (change.intersectionRatio >= 0.2) {
+            this.setState({
+              isIntersecting: true,
+            })
+          }
+        })
+      }
+
+      const observer = new IntersectionObserver(onChange, options)
+      observer.observe(node)
+    } else {
+      this.setState({
+        isIntersecting: true,
       })
     }
-
-    const observer = new IntersectionObserver(onChange, options)
-    observer.observe(node)
   }
   render() {
     const { isIntersecting } = this.state

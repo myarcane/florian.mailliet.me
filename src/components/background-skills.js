@@ -1,6 +1,4 @@
 import React, { Component } from "react"
-import Img from "gatsby-image"
-import "intersection-observer"
 import {
   scaleOrdinal,
   schemeSet3,
