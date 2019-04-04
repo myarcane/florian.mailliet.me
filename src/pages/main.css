@@ -27,11 +27,11 @@ a {
 
 .layout {
   width: 100%;
-  position: relative;
 }
 
 .main {
   width: 100%;
+  overflow: hidden;
   position: flex;
   flex-direction: column;
   top: 50px;

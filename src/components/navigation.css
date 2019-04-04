@@ -71,15 +71,10 @@
     margin-left: 40px;
   }
 
-  .logo {
-    margin-top: 0;
-  }
-
   .navbar-toggle {
     display: none;
   }
 
-  .logo:hover,
   .nav-links:hover {
     color: #000000;
   }
