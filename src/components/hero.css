@@ -1,101 +1,47 @@
-:root {
-  --caption-width: 600px;
-  --caption-height: 50vh;
-  --caption-item-margin: 15px;
-  --caption-init-translate: translateX(
-    calc(-1 * (50vw + (var(--caption-width) / 2)))
-  );
-  --caption-init-translate-2: translateX(
-    calc(50vw + (var(--caption-width) / 2))
-  );
-  --caption-final-translate: translateX(0px);
-  --caption-final-translate-2: translateX(15px);
-}
-.aligner {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+/* samllest default */
+#hero {
+  --h1-font-size: 12pt;
+  --h2-font-size: 14pt;
+  --h3-font-size: 20pt;
+  --p-font-size: 12pt;
 }
 
-.aligner__item {
-  display: flex;
-  flex-direction: column;
+/* phone */
+@media screen and (min-width: 376px) {
+  @media screen and (min-height: 400px) {
+    #hero {
+      --h2-font-size: 21pt;
+      --h3-font-size: 31pt;
+      --p-font-size: 18pt;
+    }
+  }
 }
 
-.caption {
-  padding-top: 2px;
-  padding-left: 2px;
-  opacity: 0;
-  max-width: calc(var(--caption-width) - var(--caption-item-margin));
-  height: var(--caption-height);
-  min-height: 300px;
-}
-.transition {
-  transition-property: all;
-  transition-duration: 500ms;
-  transition-timing-function: cubic-bezier(1, 0, 0, 1);
-  transform: var(--caption-init-translate);
+/* phablet */
+@media screen and (min-width: 480px) {
+  @media screen and (min-height: 400px) {
+    #hero {
+      --h2-font-size: 28pt;
+      --h3-font-size: 38pt;
+    }
+  }
 }
 
-.transition:nth-of-type(2) {
-  transform: var(--caption-init-translate-2);
-}
-
-.fadein {
-  opacity: 1;
-  transform: var(--caption-final-translate);
-}
-
-.fadein:nth-of-type(2) {
-  transform: var(--caption-final-translate-2);
-}
-
-.caption__item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-  width: 100%;
-  height: var(--caption-height);
-  min-height: 300px;
-  border-left: 1px solid rgb(136, 146, 176);
-  background-color: #ffffff;
-  opacity: 0.8;
-}
-
-.caption__item > h1,
-.caption__item > h2,
-.caption__item > h3,
-.caption__item > p {
-  color: #000000;
-  font-size: 18pt;
-  margin: 6px var(--caption-item-margin);
-  text-align: left;
-  transform: translateX(calc(-1 * var(--caption-width)));
-  transition-property: transform;
-  transition-duration: 400ms;
-  transition-timing-function: ease-out;
-  transition-delay: 600ms;
-}
-
-.caption__item > h1 {
-  font-size: 12pt;
+#hero h1 {
+  font-size: var(--h1-font-size);
   font-weight: normal;
 }
 
-.caption__item > h2 {
-  font-size: 28pt;
+#hero h2 {
+  font-size: var(--h2-font-size);
 }
 
-.caption__item > h3 {
-  font-size: 25pt;
-  font-weight: normal;
+#hero h3 {
+  font-size: var(--h3-font-size);
   color: rgb(136, 146, 176);
 }
 
-.caption.fadein .caption__item > h1,
-.caption.fadein .caption__item > h2,
-.caption.fadein .caption__item > h3,
-.caption.fadein .caption__item > p {
-  transform: translateX(0);
+#hero p {
+  margin-top: 20px;
+  font-size: var(--p-font-size);
 }

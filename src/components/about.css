@@ -1,0 +1,40 @@
+#about {
+  --h1-font-size: 22pt;
+  --p-font-size: 10pt;
+  --caption-width: 80vw;
+  --caption-item-margin: 0px;
+}
+
+/* phone */
+@media screen and (min-width: 376px) {
+  #about {
+    --p-font-size: 12pt;
+  }
+}
+
+#about .caption {
+  padding-left: 0px;
+}
+
+#about .caption__item {
+  max-width: 1000px;
+}
+
+#about h1 {
+  font-size: var(--h1-font-size);
+  color: #000000;
+  margin-top: 20px;
+}
+
+#about h2 {
+  font-size: var(--h2-font-size);
+}
+
+#about h3 {
+  font-size: var(--h3-font-size);
+  color: rgb(136, 146, 176);
+}
+
+#about p {
+  font-size: var(--p-font-size);
+}

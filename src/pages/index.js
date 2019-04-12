@@ -1,20 +1,19 @@
 import React from "react"
 import { graphql } from "gatsby"
-import "./main.css"
+import "font-awesome/css/font-awesome.min.css"
+import "./index.css"
 import Navigation from "../components/navigation"
 import Hero from "../components/hero"
-import BackgroundSkills from "../components/background-skills"
-import { Helmet } from "react-helmet"
+import About from "../components/about"
 
 const HomePage = ({ data }) => {
   return (
     <div>
       <div className="layout">
         <Navigation />
-        <BackgroundSkills data={data} />
         <div className="main">
-          <Hero data={data} />
-          <Hero data={data} />
+          <Hero id="hero" data={data} />
+          <About id="about" data={data} />
         </div>
       </div>
     </div>
@@ -34,8 +33,15 @@ export const query = graphql`
 
     profileImage: file(relativePath: { eq: "me.jpg" }) {
       childImageSharp {
-        fixed(width: 310) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    climbingImage: file(relativePath: { eq: "climbing.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

@@ -1,5 +1,5 @@
 .navbar {
-  font-size: 18px;
+  font-size: 12px;
   background-color: #ffffff;
   position: fixed;
   top: 0;
@@ -16,7 +16,7 @@
 
 .nav-links {
   text-decoration: none;
-  color: rgb(123, 132, 160);
+  color: #000000;
 }
 
 .main-nav li {
