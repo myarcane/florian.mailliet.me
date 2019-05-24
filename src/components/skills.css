@@ -1,0 +1,73 @@
+/* samllest default */
+#skills {
+  --h1-font-size: 30pt;
+  --h2-font-size: 18pt;
+  --p-font-size: 10pt;
+  --caption-width: 90vw;
+  --caption-item-margin: 0px;
+}
+
+/* phone */
+@media screen and (min-width: 376px) {
+  #skills {
+    --p-font-size: 12pt;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  #skills .caption {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #skills .caption__item {
+    max-width: 600px;
+  }
+}
+
+.skills--grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#skills li {
+  margin: 2px;
+  padding: 0.3em 1em;
+  border: 2px solid;
+  border-radius: 3px;
+  font-size: 11pt;
+  font-weight: 500;
+  line-height: 1.7em;
+  color: #47a0f7;
+  box-shadow: 0 8px 6px -6px #cccccc;
+}
+
+#skills.aligner {
+  margin-top: 50px;
+}
+
+#skills h1 {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 900;
+  font-size: var(--h1-font-size);
+  width: 275px;
+  text-align: left;
+}
+
+#skills h2 {
+  font-size: var(--h2-font-size);
+  color: rgb(136, 146, 176);
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+}
+
+#skills h2 span {
+  font-weight: 900;
+}
+
+#skills h3 {
+  font-size: 15pt;
+}
+
+#skills p {
+  font-size: var(--p-font-size);
+}

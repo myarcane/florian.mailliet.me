@@ -7,6 +7,14 @@
   width: 100%;
   z-index: 1;
   height: 50px;
+  transition: background-color;
+  transition-duration: 500ms;
+}
+
+.open {
+  height: 100vh;
+  background-color: #000000;
+  font-size: 20px;
 }
 
 .main-nav {
@@ -14,14 +22,49 @@
   display: none;
 }
 
+.navbar.open .main-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
 .nav-links {
   text-decoration: none;
   color: #000000;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 900;
+  height: 21px;
+  overflow: hidden;
+  margin: 15px;
+}
+
+.nav-links ul li:nth-of-type(2) {
+  color: #47a0f7;
+}
+
+.nav-links ul {
+  transition-property: transform;
+  transition-duration: 400ms;
+  height: 100%;
+}
+
+.nav-links--on {
+  transform: translateY(-21px);
+}
+
+.nav-links--off {
+  transform: translateY(0px);
+}
+
+.navbar.open .nav-links {
+  color: #ffffff;
 }
 
 .main-nav li {
+  height: 100%;
   text-align: center;
-  margin: 15px auto;
+  margin: 0px 0px;
 }
 
 .social {
@@ -43,10 +86,6 @@
   font-size: 24px;
 }
 
-.active {
-  display: block;
-}
-
 @media screen and (min-width: 768px) {
   .navbar {
     display: flex;
@@ -54,13 +93,20 @@
     padding-bottom: 0;
     align-items: center;
     height: 50px;
+    font-size: 12px;
   }
 
-  .main-nav {
+  .navbar.open {
+    background-color: #ffffff;
+  }
+
+  .main-nav,
+  .navbar.open .main-nav {
     display: flex;
     margin-right: 30px;
     flex-direction: row;
     justify-content: flex-end;
+    height: auto;
   }
 
   .main-nav li {
@@ -69,6 +115,10 @@
 
   .nav-links {
     margin-left: 40px;
+  }
+
+  .navbar.open .nav-links {
+    color: #000000;
   }
 
   .navbar-toggle {

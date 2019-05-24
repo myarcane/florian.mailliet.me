@@ -1,6 +1,5 @@
 :root {
   --caption-width: 600px;
-  --caption-height: 100vh;
   --caption-item-margin: 30px;
   --p-font-size: 18pt;
 }
@@ -16,10 +15,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow: hidden;
   width: 100%;
   min-height: var(--caption-height);
-  background-color: #ffffff;
   opacity: 0.9;
 }
 

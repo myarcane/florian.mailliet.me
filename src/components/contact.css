@@ -1,0 +1,56 @@
+/* samllest default */
+#contact {
+  --h1-font-size: 30pt;
+  --h2-font-size: 18pt;
+  --p-font-size: 10pt;
+  --caption-width: 90vw;
+  --caption-item-margin: 0px;
+}
+
+/* phone */
+@media screen and (min-width: 376px) {
+  #contact {
+    --p-font-size: 12pt;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  #contact .caption {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #contact .caption__item {
+    max-width: 600px;
+  }
+}
+
+#contact.aligner {
+  margin-top: 80px;
+}
+
+#contact h1 {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 900;
+  font-size: var(--h1-font-size);
+  width: 275px;
+  text-align: left;
+}
+
+#contact h2 {
+  font-size: var(--h2-font-size);
+  color: rgb(136, 146, 176);
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+}
+
+#contact h2 span {
+  font-weight: 900;
+}
+
+#contact h3 {
+  font-size: 15pt;
+}
+
+#contact p {
+  font-size: var(--p-font-size);
+}

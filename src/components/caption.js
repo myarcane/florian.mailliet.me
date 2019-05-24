@@ -6,9 +6,12 @@ class Caption extends Component {
     super(props)
 
     this.captionNode = React.createRef()
+    this.captionItems = React.createRef()
+    this.getItemsHeight = this.getItemsHeight.bind(this)
 
     this.state = {
       isIntersecting: false,
+      nodeHeight: 0,
     }
   }
 
@@ -40,6 +43,12 @@ class Caption extends Component {
       })
     }
   }
+
+  getItemsHeight() {
+    const node = this.captionItems.current
+    return node.getBoundingClientRect().height
+  }
+
   render() {
     const { isIntersecting } = this.state
     const { children } = this.props
@@ -48,7 +57,9 @@ class Caption extends Component {
         ref={this.captionNode}
         className={`caption ${isIntersecting ? "fadein" : ""}`}
       >
-        <div className="caption__item">{children}</div>
+        <div ref={this.captionItems} className="caption__item">
+          {children}
+        </div>
       </div>
     )
   }

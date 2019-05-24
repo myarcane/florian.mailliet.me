@@ -10,10 +10,45 @@ body {
   background-color: white;
 }
 
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/gilroy/gilroy-medium-webfont.woff2") format("woff2"),
+    url("/fonts/gilroy/gilroy-medium-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/gilroy/gilroy-bold-webfont.woff2") format("woff2"),
+    url("/fonts/gilroy/gilroy-bold-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/gilroy/gilroy-extrabold-webfont.woff2") format("woff2"),
+    url("/fonts/gilroy/gilroy-extrabold-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 900;
+  src: url("/fonts/gilroy/gilroy-heavy-webfont.woff2") format("woff2"),
+    url("/fonts/gilroy/gilroy-heavy-webfont.woff") format("woff");
+}
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 h2 {
@@ -21,12 +56,12 @@ h2 {
 }
 
 a {
-  color: #47a0f7;
+  color: #000000;
   text-decoration: none;
 }
 
 a:hover {
-  color: #000000;
+  color: #47a0f7;
 }
 
 .layout {
@@ -49,11 +84,9 @@ a:hover {
 .aligner__item {
   display: flex;
   flex-direction: column;
-}
-
-.image--cover {
-  box-shadow: 0 8px 6px -6px #000000;
-  max-width: 450px;
+  justify-content: center;
+  /* menu height */
+  padding-top: 41px;
 }
 
 .button {
