@@ -50,10 +50,16 @@ class Navigation extends Component {
     })
   }
 
+  getLocationHash() {
+    if (window) {
+      return window.location.hash
+    } else ""
+  }
+
   componentDidMount() {
     this.checkLocation()
 
-    const hash = window.location.hash
+    const hash = this.getLocationHash()
 
     // ugly hack to scroll to the hash at start
     if (hash !== "") {
@@ -70,10 +76,9 @@ class Navigation extends Component {
   }
 
   checkLocation() {
-    const hash = window.location.hash
     const { menu } = this.state
     Object.keys(this.state.menu).map(item => {
-      if (menu[item].to === hash) {
+      if (menu[item].to === this.getLocationHash()) {
         menu[item].ref.current.setOn()
       } else {
         menu[item].ref.current.setOff()

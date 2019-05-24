@@ -30,12 +30,16 @@ class About extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener("resize", this.onResize)
-    this.onResize()
+    if (window) {
+      window.addEventListener("resize", this.onResize)
+      this.onResize()
+    }
   }
 
-  componentWillMount() {
-    window.removeEventListener("resize", this.onResize)
+  componentWillUnmount() {
+    if (window) {
+      window.removeEventListener("resize", this.onResize)
+    }
   }
 
   render() {
