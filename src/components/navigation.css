@@ -6,9 +6,17 @@
   left: 0;
   width: 100%;
   z-index: 1;
-  height: 50px;
+  height: var(--menu-height);
   transition: background-color;
   transition-duration: 500ms;
+}
+
+i.fa:hover {
+  color: #47a0f7;
+}
+
+.navbar.open .social i {
+  color: white;
 }
 
 .open {

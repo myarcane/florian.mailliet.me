@@ -1,15 +1,23 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway");
-html,
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Raleway", serif;
-  font-weight: 150;
-  width: 100%;
-  height: 100vh;
-  background-color: white;
+/* variables */
+:root {
+  /* colors */
+  --highlight-color: #47a0f7;
+  --nav-item-color: black;
+  --link-color: black;
+  --h1-color: black;
+  --h2-color: rgb(136, 146, 176);
+  --p-color: black;
+  /* titles font family */
+  --titles-font-family: "Gilroy", sans-serif;
+  /* sizes */
+  --h1-font-size: 30pt;
+  --h2-font-size: 18pt;
+  --p-font-size: 12pt;
+  --menu-height: 50px;
 }
 
+/* fonts */
+@import url("https://fonts.googleapis.com/css?family=Raleway");
 @font-face {
   font-family: "Gilroy";
   font-style: normal;
@@ -39,6 +47,19 @@ body {
     url("/fonts/gilroy/gilroy-heavy-webfont.woff") format("woff");
 }
 
+/* body */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", serif;
+  font-weight: 150;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+
+/* reset */
 *,
 *:before,
 *:after {
@@ -51,17 +72,39 @@ ul {
   margin: 0;
 }
 
-h2 {
-  font-size: 20pt;
+/* titles */
+h1 {
+  font-family: var(--titles-font-family);
+  font-weight: 900;
+  font-size: var(--h1-font-size);
+  color: var(--h1-color);
 }
 
+h2 {
+  font-family: var(--titles-font-family);
+  font-weight: 400;
+  font-size: var(--h2-font-size);
+  color: var(--h2-color);
+}
+
+h2 span {
+  font-weight: 900;
+}
+
+/* p */
+p {
+  font-size: var(--p-font-size);
+  color: var(--p-color);
+}
+
+/* link */
 a {
-  color: #000000;
+  color: var(--link-color);
   text-decoration: none;
 }
 
 a:hover {
-  color: #47a0f7;
+  color: var(--highlight-color);
 }
 
 .layout {
@@ -86,9 +129,10 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   /* menu height */
-  padding-top: 41px;
+  padding-top: var(--menu-height);
 }
 
+/* button */
 .button {
   position: relative;
   padding: 0.3em 1em;

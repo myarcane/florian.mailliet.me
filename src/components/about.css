@@ -1,41 +1,22 @@
 /* samllest default */
 #about {
-  --h1-font-size: 30pt;
-  --h2-font-size: 18pt;
-  --h3-font-size: 20pt;
-  --p-font-size: 10pt;
-  --caption-width: 90vw;
-  --caption-item-margin: 0px;
+  /* image */
   --image-cover-width: 250px;
   --image-cover-height: 300px;
 }
 
-/* phone */
-@media screen and (min-width: 376px) {
-  #about {
-    --p-font-size: 12pt;
-  }
-}
-
+/* tablet & desktop */
 @media screen and (min-width: 700px) {
   #about .aligner__item {
-    /* switch to row for large device */
+    /* switch to row for tablet & desktop */
     flex-direction: row;
   }
-  #about .caption {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  #about .caption__item {
-    max-width: 500px;
-  }
+
   #about {
-    /* --caption-height: 100vh; */
     /* change image size */
     --image-cover-width: 295px;
     --image-cover-height: 345px;
     --caption-width: auto;
-    --h2-font-size: 18pt;
   }
 }
 
@@ -45,30 +26,6 @@
   height: var(--image-cover-height);
 }
 
-#about h1 {
-  font-family: "Gilroy", sans-serif;
-  font-weight: 900;
-  font-size: var(--h1-font-size);
-  color: #000000;
-}
-
-#about h2 {
-  font-family: "Gilroy", sans-serif;
-  font-weight: 400;
-  font-size: var(--h2-font-size);
-  color: rgb(136, 146, 176);
-}
-
 #about h2 span {
-  font-weight: 900;
-  color: #47a0f7;
-}
-
-#about h3 {
-  font-size: var(--h3-font-size);
-  color: rgb(136, 146, 176);
-}
-
-#about p {
-  font-size: var(--p-font-size);
+  color: var(--highlight-color);
 }

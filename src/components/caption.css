@@ -1,7 +1,6 @@
 :root {
-  --caption-width: 600px;
-  --caption-item-margin: 30px;
-  --p-font-size: 18pt;
+  --caption-width: 90vw;
+  --caption-item-margin: 0px;
 }
 
 .caption {
@@ -16,7 +15,6 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  min-height: var(--caption-height);
   opacity: 0.9;
 }
 
@@ -24,8 +22,6 @@
 .caption__item h2,
 .caption__item h3,
 .caption__item p {
-  color: #000000;
-  font-size: var(--p-font-size);
   margin: 6px var(--caption-item-margin);
   text-align: left;
   opacity: 0;
@@ -40,4 +36,15 @@
 .caption.fadein .caption__item p {
   transform: translateY(0);
   opacity: 1;
+}
+
+/* tablet & desktop */
+@media screen and (min-width: 700px) {
+  .caption__item {
+    max-width: 500px;
+  }
+  .caption {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

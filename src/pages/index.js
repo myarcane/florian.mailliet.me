@@ -40,12 +40,5 @@ export const query = graphql`
         }
       }
     }
-    climbingImage: file(relativePath: { eq: "climbing.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
   }
 `

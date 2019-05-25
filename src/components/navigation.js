@@ -53,7 +53,9 @@ class Navigation extends Component {
   getLocationHash() {
     if (window) {
       return window.location.hash
-    } else ""
+    } else {
+      return ""
+    }
   }
 
   componentDidMount() {
