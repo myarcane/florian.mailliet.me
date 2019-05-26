@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import Scrollspy from "react-scrollspy"
 import "./navigation.css"
-import Scrollchor from "react-scrollchor"
 import NavItem from "./nav-item"
 
 class Navigation extends Component {

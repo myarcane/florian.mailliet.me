@@ -1,28 +1,40 @@
+:root {
+  /* small screen */
+  --nav-height: 50px;
+  --nav-bg-color: white;
+  --nav-open-bg-color: black;
+  /* items */
+  --nav-item-color: white;
+  --nav-item-hover-color: #47a0f7;
+  --nav-item-font-size: 20px;
+  /* socials */
+  --nav-social-color: black;
+  --nav-social-open-color: white;
+  --nav-social-hover-color: #47a0f7;
+  --nav-social-font-size: 18px;
+  /* toggle */
+  --nav-toggle-color: rgb(141, 211, 199);
+  --nav-toggle-hover-color: #47a0f7;
+  --nav-toggle-font-size: 24px;
+  /* font */
+  --nav-item-font-family: "Gilroy", sans-serif;
+}
+
 .navbar {
-  font-size: 12px;
-  background-color: #ffffff;
+  background-color: var(--nav-bg-color);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1;
-  height: var(--menu-height);
+  height: var(--nav-height);
   transition: background-color;
   transition-duration: 500ms;
 }
 
-i.fa:hover {
-  color: #47a0f7;
-}
-
-.navbar.open .social i {
-  color: white;
-}
-
 .open {
   height: 100vh;
-  background-color: #000000;
-  font-size: 20px;
+  background-color: var(--nav-open-bg-color);
 }
 
 .main-nav {
@@ -39,22 +51,24 @@ i.fa:hover {
 
 .nav-links {
   text-decoration: none;
-  color: #000000;
-  font-family: "Gilroy", sans-serif;
+  color: var(--nav-item-color);
+  font-family: var(--nav-item-font-family);
+  font-size: var(--nav-item-font-size);
   font-weight: 900;
+  /* 21px important magic number to be able for the item translation animation  */
   height: 21px;
   overflow: hidden;
   margin: 15px;
-}
-
-.nav-links ul li:nth-of-type(2) {
-  color: #47a0f7;
 }
 
 .nav-links ul {
   transition-property: transform;
   transition-duration: 400ms;
   height: 100%;
+}
+
+.nav-links ul li:nth-of-type(2) {
+  color: var(--nav-item-hover-color);
 }
 
 .nav-links--on {
@@ -65,47 +79,63 @@ i.fa:hover {
   transform: translateY(0px);
 }
 
-.navbar.open .nav-links {
-  color: #ffffff;
-}
-
 .main-nav li {
   height: 100%;
   text-align: center;
   margin: 0px 0px;
 }
 
+/* social */
 .social {
   display: flex;
 }
 
 .social a {
   margin: 10px;
-  font-size: 18px;
-  color: #000000;
+  font-size: var(--nav-social-font-size);
+  color: var(--nav-social-color);
 }
 
+.navbar.open .social a {
+  color: var(--nav-social-open-color);
+}
+
+.social a:hover,
+.navbar.open .social a:hover {
+  color: var(--nav-social-hover-color);
+}
+
+/* toggle button */
 .navbar-toggle {
   position: absolute;
   top: 10px;
   right: 20px;
   cursor: pointer;
-  color: rgb(141, 211, 199);
-  font-size: 24px;
+  color: var(--nav-toggle-color);
+  font-size: var(--nav-toggle-font-size);
 }
 
+.navbar-toggle:hover {
+  color: var(--nav-toggle-hover-color);
+}
+
+/* desktop */
 @media screen and (min-width: 768px) {
+  :root {
+    --nav-item-color: black;
+    --nav-item-font-size: 12px;
+  }
+
   .navbar {
     display: flex;
     justify-content: space-between;
     padding-bottom: 0;
     align-items: center;
-    height: 50px;
-    font-size: 12px;
+    height: var(--nav-height);
   }
 
   .navbar.open {
-    background-color: #ffffff;
+    background-color: var(--nav-bg-color);
   }
 
   .main-nav,
@@ -125,15 +155,7 @@ i.fa:hover {
     margin-left: 40px;
   }
 
-  .navbar.open .nav-links {
-    color: #000000;
-  }
-
   .navbar-toggle {
     display: none;
-  }
-
-  .nav-links:hover {
-    color: #000000;
   }
 }

@@ -2,7 +2,6 @@
 :root {
   /* colors */
   --highlight-color: #47a0f7;
-  --nav-item-color: black;
   --link-color: black;
   --h1-color: black;
   --h2-color: rgb(136, 146, 176);
@@ -128,8 +127,8 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* menu height */
-  padding-top: var(--menu-height);
+  /* nav height */
+  padding-top: var(--nav-height);
 }
 
 /* button */
