@@ -1,6 +1,6 @@
 @media screen and (min-width: 700px) {
   #skills .caption__item {
-    max-width: 700px;
+    max-width: 550px;
   }
 }
 
@@ -15,7 +15,7 @@
   padding: 0.3em 1em;
   border: 2px solid;
   border-radius: 3px;
-  font-size: 11pt;
+  font-size: 10pt;
   font-weight: 500;
   line-height: 1.7em;
   color: var(--highlight-color);
@@ -41,6 +41,10 @@
 
 #skills .caption__item h2 {
   transform: translateY(0);
+}
+
+#skills h2:nth-of-type(2) span {
+  color: var(--highlight-color);
 }
 
 #skills.aligner {

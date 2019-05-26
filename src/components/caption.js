@@ -31,6 +31,10 @@ class Caption extends Component {
             this.setState({
               isIntersecting: true,
             })
+
+            if (this.props.onIntersecting) {
+              this.props.onIntersecting()
+            }
           }
         })
       }
@@ -41,6 +45,10 @@ class Caption extends Component {
       this.setState({
         isIntersecting: true,
       })
+
+      if (this.props.onIntersecting) {
+        this.props.onIntersecting()
+      }
     }
   }
 

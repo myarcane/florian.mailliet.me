@@ -14,6 +14,12 @@ class Navigation extends Component {
         to: "#about",
         isInternal: true,
       },
+      work: {
+        name: "Work.",
+        ref: React.createRef(),
+        to: "#work",
+        isInternal: true,
+      },
       skills: {
         name: "Skills.",
         ref: React.createRef(),
@@ -29,12 +35,13 @@ class Navigation extends Component {
       resume: {
         name: "Resume.",
         ref: React.createRef(),
-        to: "#",
+        to: "/resume.pdf",
         isInternal: false,
       },
     }
 
     this.toggleMenu = this.toggleMenu.bind(this)
+    this.closeMenu = this.closeMenu.bind(this)
     this.checkLocation = this.checkLocation.bind(this)
 
     this.state = {
@@ -46,6 +53,12 @@ class Navigation extends Component {
   toggleMenu() {
     this.setState({
       isOpen: this.state.isOpen ? false : true,
+    })
+  }
+
+  closeMenu() {
+    this.setState({
+      isOpen: false,
     })
   }
 
@@ -100,7 +113,7 @@ class Navigation extends Component {
           ref={menu[item].ref}
           isInternal={menu[item].isInternal}
           afterNav={this.checkLocation}
-          onClick={this.toggleMenu}
+          onClick={this.closeMenu}
         />
       )
     })
@@ -111,10 +124,18 @@ class Navigation extends Component {
           <i className="fa fa-bars" />
         </span>
         <div className="social">
-          <a href="https://github.com/myarcane/">
+          <a
+            href="https://github.com/myarcane/"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+          >
             <i className="fa fa-github" />
           </a>
-          <a href="https://www.linkedin.com/in/florian-mailliet-30682b183/">
+          <a
+            href="https://www.linkedin.com/in/florian-mailliet-30682b183/"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+          >
             <i className="fa fa-linkedin" />
           </a>
         </div>

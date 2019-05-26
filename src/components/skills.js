@@ -1,40 +1,20 @@
 import React, { Component } from "react"
 import Caption from "./caption"
 import "./skills.css"
+import skills from "../data/skills.json"
+import projects from "../data/projects"
 
 const Skills = ({ id }) => {
-  const skills = [
-    "JavaScript (ES6+)",
-    "HTML",
-    "CSS3/Sass",
-    "PHP",
-    "React",
-    "Preact",
-    "Redux",
-    "Jasmine",
-    "Jest",
-    "Enzyme",
-    "NodeJS",
-    "Webpack",
-    "Babel",
-    "npm",
-    "Git",
-    "Jira",
-  ]
-
-  const projects = [
-    {
-      title: "easy-pr",
-      link: "https://github.com/myarcane/easy-pr",
-    },
-  ]
-
   const skillItems = []
   let transitionDelay = 800
 
-  skills.map(skill => {
+  skills.map((skill, id) => {
     skillItems.push(
-      <li className="skill" style={{ transitionDelay: `${transitionDelay}ms` }}>
+      <li
+        key={id.toString()}
+        className="skill"
+        style={{ transitionDelay: `${transitionDelay}ms` }}
+      >
         {skill}
       </li>
     )
@@ -42,9 +22,9 @@ const Skills = ({ id }) => {
   })
 
   const projectItems = []
-  projects.map(project => {
+  projects.map((project, id) => {
     projectItems.push(
-      <a href={project.link}>
+      <a href={project.link} key={id.toString()}>
         <li
           className="project"
           style={{ transitionDelay: `${transitionDelay}ms` }}
@@ -77,6 +57,8 @@ const Skills = ({ id }) => {
             Here is few <span>technologies</span> I've been working with
           </h2>
           <ul className="skills--grid">{skillItems}</ul>
+          <p />
+          <p />
           <h2
             style={{
               transitionDelay: `${transitionDelay}ms`,

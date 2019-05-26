@@ -43,25 +43,47 @@ export default class ScrollchorItem extends Component {
   }
 
   render() {
-    const { to, name, onClick, afterNav } = this.props
+    const { to, name, onClick, afterNav, isInternal } = this.props
     const { isOn, isHovering } = this.state
-    return (
-      <Scrollchor
-        ref={this.navItem}
-        to={to}
-        afterAnimate={afterNav}
-        className="nav-links"
+
+    const list = (
+      <ul
+        onClick={onClick}
+        onMouseOver={this.onMouseOver}
+        onMouseOut={this.onMouseOut}
+        className={isOn || isHovering ? "nav-links--on" : "nav-links--off"}
       >
-        <ul
-          onClick={onClick}
-          onMouseOver={this.onMouseOver}
-          onMouseOut={this.onMouseOut}
-          className={isOn || isHovering ? "nav-links--on" : "nav-links--off"}
-        >
-          <li>{name}</li>
-          <li>{name}</li>
-        </ul>
-      </Scrollchor>
+        <li>{name}</li>
+        <li>{name}</li>
+      </ul>
     )
+
+    let NavItem
+
+    if (isInternal) {
+      NavItem = (
+        <Scrollchor
+          ref={this.navItem}
+          to={to}
+          afterAnimate={afterNav}
+          className="nav-links"
+        >
+          {list}
+        </Scrollchor>
+      )
+    } else {
+      NavItem = (
+        <a
+          href={to}
+          className="nav-links"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
+          {list}
+        </a>
+      )
+    }
+
+    return NavItem
   }
 }

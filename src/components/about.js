@@ -16,7 +16,7 @@ class About extends Component {
   }
 
   onResize() {
-    let { captionHeight } = getComputedStyle(
+    let captionHeight = getComputedStyle(
       ReactDOM.findDOMNode(this)
     ).getPropertyValue("--image-cover-height")
 
@@ -77,14 +77,14 @@ class About extends Component {
                 transitionDelay: "600ms",
               }}
             >
-              I'm a <b>JavaScript</b> developer based in the Nice Area, France.
-              Currently working at
+              I'm a <span>JavaScript developer</span> based in the Nice Area,
+              France. Currently working @
               <a
                 href="https://www.dailymotion.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <b> dailymotion </b>
+                <b>dailymotion </b>
               </a>
               as a senior Front-end engineer.
             </p>
@@ -95,10 +95,10 @@ class About extends Component {
             >
               I'm originally from Paris but I moved in the south of France 6
               years ago. Highly motivated and passionated about the web, I have
-              been crafting digital products for over <b>10 years</b>. Strongly
-              focused on <b>UI</b>, I like to be involved in innovative
-              projects, interact and share knowledge with people with a strong{" "}
-              <b>team</b> mindset.
+              been crafting digital products for over
+              <span> 10 years</span>. Strongly focused on <span>UI</span>, I
+              like to be involved in innovative projects, interact and share
+              knowledge with people with a strong <span>team mindset</span> .
             </p>
             <p />
             <p
@@ -106,9 +106,10 @@ class About extends Component {
                 transitionDelay: "800ms",
               }}
             >
-              When I'm not coding, I like to have fun outdoors. My passion
-              number 1 is climbing. I absolutely love it. I also do couple of
-              other sports : open water swimming, cycling, volleyball.
+              When I'm not writing or reviewing code, I like to have fun
+              outdoors. My passion number 1 is climbing. I absolutely love it. I
+              also do couple of other sports : open water swimming, cycling,
+              volleyball.
             </p>
             <p />
           </Caption>

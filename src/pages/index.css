@@ -5,6 +5,8 @@
   --link-color: black;
   --h1-color: black;
   --h2-color: rgb(136, 146, 176);
+  --h3-color: #47a0f7;
+  --h4-color: black;
   --p-color: black;
   /* titles font family */
   --titles-font-family: "Gilroy", sans-serif;
@@ -13,6 +15,9 @@
   --h2-font-size: 18pt;
   --p-font-size: 12pt;
   --menu-height: 50px;
+  /* button font size */
+  --button-font-size: 20px;
+  --button-arrow-size: calc(var(--button-font-size) / 3);
 }
 
 /* fonts */
@@ -90,10 +95,32 @@ h2 span {
   font-weight: 900;
 }
 
+h3 {
+  color: var(--h3-color);
+  font-size: 11pt;
+}
+
+h4 {
+  font-family: var(--titles-font-family);
+  font-weight: 400;
+  color: var(--h4-color);
+  font-size: 12pt;
+}
+
 /* p */
 p {
   font-size: var(--p-font-size);
   color: var(--p-color);
+}
+
+p span,
+p a {
+  font-family: var(--titles-font-family);
+  font-weight: 400;
+}
+
+p a {
+  text-decoration: underline;
 }
 
 /* link */
@@ -137,7 +164,7 @@ a:hover {
   padding: 0.3em 1em;
   border: 2px solid;
   border-radius: 3px;
-  font-size: 20px;
+  font-size: var(--button-font-size);
   font-weight: 500;
   line-height: 1.7em;
   transition: all 0.2s;
@@ -156,9 +183,9 @@ a:hover {
   display: inline-block;
   content: "";
   position: absolute;
-  width: 10px;
-  height: 10px;
-  top: calc((40px - 12px) / 2);
+  width: var(--button-arrow-size);
+  height: var(--button-arrow-size);
+  top: calc((100% - var(--button-arrow-size)) / 2);
   transform: rotate(-45deg);
 }
 
