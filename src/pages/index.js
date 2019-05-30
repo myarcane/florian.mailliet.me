@@ -7,6 +7,9 @@ import Contact from "../components/contact"
 import About from "../components/about"
 import Skills from "../components/skills"
 import Work from "../components/work"
+import cssVars from "css-vars-ponyfill"
+
+cssVars()
 
 const HomePage = ({ data }) => {
   return (
