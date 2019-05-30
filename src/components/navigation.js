@@ -139,9 +139,9 @@ class Navigation extends Component {
             <i className="fa fa-linkedin" />
           </a>
         </div>
-        <ul className="main-nav active" id="js-menu">
+        <div className="main-nav active" id="js-menu">
           {navItems}
-        </ul>
+        </div>
       </nav>
     )
   }
