@@ -1,5 +1,5 @@
 /* samllest default */
-#about {
+:root {
   /* image */
   --image-cover-width: 250px;
   --image-cover-height: 300px;
