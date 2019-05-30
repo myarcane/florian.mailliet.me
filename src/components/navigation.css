@@ -4,9 +4,11 @@
   --nav-bg-color: white;
   --nav-open-bg-color: black;
   /* items */
-  --nav-item-color: white;
+  --nav-item-color: black;
+  --nav-item-font-size: 12px;
+  --nav-item-open-color: white;
+  --nav-item-open-font-size: 20px;
   --nav-item-hover-color: #47a0f7;
-  --nav-item-font-size: 20px;
   /* socials */
   --nav-social-color: black;
   --nav-social-open-color: white;
@@ -51,9 +53,9 @@
 
 .nav-links {
   text-decoration: none;
-  color: var(--nav-item-color);
+  color: var(--nav-item-open-color);
   font-family: var(--nav-item-font-family);
-  font-size: var(--nav-item-font-size);
+  font-size: var(--nav-item-open-font-size);
   font-weight: 900;
   /* 21px important magic number to be able for the item translation animation  */
   height: 21px;
@@ -127,12 +129,14 @@
     padding-bottom: 0;
     align-items: center;
     height: var(--nav-height);
-    --nav-item-color: black;
-    --nav-item-font-size: 12px;
   }
 
   .navbar.open {
     background-color: var(--nav-bg-color);
+  }
+
+  .navbar.open .social a {
+    color: var(--nav-social-color);
   }
 
   .main-nav,
@@ -150,6 +154,8 @@
 
   .nav-links {
     margin-left: 40px;
+    color: var(--nav-item-color);
+    font-size: var(--nav-item-font-size);
   }
 
   .navbar-toggle {
