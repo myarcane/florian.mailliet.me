@@ -25,7 +25,7 @@ const Contact = ({ id }) => {
             Feel free to{" "}
             <a
               className="button"
-              href="mailto:florian.mailliet@gmail.com"
+              href="mailto:florian@mailliet.me"
               target="_blank"
               rel="noopener noreferrer"
             >
