@@ -11,9 +11,11 @@
   /* titles font family */
   --titles-font-family: "Gilroy", sans-serif;
   /* sizes */
-  --h1-font-size: 30pt;
-  --h2-font-size: 18pt;
-  --p-font-size: 12pt;
+  --h1-font-size: 40px;
+  --h2-font-size: 24px;
+  --h3-font-size: 14px;
+  --h4-font-size: 16px;
+  --p-font-size: 16px;
   --menu-height: 50px;
   /* button font size */
   --button-font-size: 20px;
@@ -97,14 +99,14 @@ h2 span {
 
 h3 {
   color: var(--h3-color);
-  font-size: 11pt;
+  font-size: var(--h3-font-size);
 }
 
 h4 {
   font-family: var(--titles-font-family);
   font-weight: 400;
   color: var(--h4-color);
-  font-size: 12pt;
+  font-size: var(--h4-font-size);
 }
 
 /* p */
