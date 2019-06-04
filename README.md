@@ -1,6 +1,6 @@
 # My personal SPA
 
-This is the source code for my personal buisness card website https://flos.site.
+This is the source code for my personal SPA website https://flos.site.
 Build using React & Gatsby.
 
 ## Tech stack
