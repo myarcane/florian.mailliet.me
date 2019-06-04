@@ -1,4 +1,4 @@
-# My personal buisness card website
+# My personal SPA
 
 This is the source code for my personal buisness card website https://flos.site.
 Build using React & Gatsby.
@@ -9,7 +9,7 @@ Build using React & Gatsby.
 - [Font Awesome](https://fontawesome.com/) - icons
 - [Netlify](https://www.netlify.com/) - static site hosting
 - [Prettier](https://prettier.io/) - An opinionated code formatter
-- Pure CSS no preprocessor or CSS in JS libraries
+- Pure CSS3+ no preprocessor or CSS in JS libraries
 
 ## Sitemap
 
