@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 
 const JobDetail = ({ tasks, position, title, visible, company, link, id }) => {
   company = company.toLowerCase()

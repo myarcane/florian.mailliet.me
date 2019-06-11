@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Scrollspy from "react-scrollspy"
+// import Scrollspy from "react-scrollspy"
 import "./navigation.css"
 import NavItem from "./nav-item"
 

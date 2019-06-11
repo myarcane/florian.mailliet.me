@@ -29,7 +29,7 @@ class JobItem extends Component {
     this.props.onClickItem(this.props.id)
   }
   render() {
-    const { years, transitionDelay, isOn, id } = this.props
+    const { years, transitionDelay, isOn } = this.props
     const { isHover } = this.state
     return (
       <li
