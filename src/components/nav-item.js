@@ -75,7 +75,7 @@ export default class ScrollchorItem extends Component {
       NavItem = (
         <a
           href={to}
-          className="nav-links"
+          className="nav-links nav-links--ext"
           target="_blank"
           rel="nofollow noopener noreferrer"
         >

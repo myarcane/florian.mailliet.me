@@ -2,6 +2,7 @@ import React, { Component } from "react"
 // import Scrollspy from "react-scrollspy"
 import "./navigation.css"
 import NavItem from "./nav-item"
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock"
 
 class Navigation extends Component {
   constructor(props) {
@@ -9,31 +10,31 @@ class Navigation extends Component {
 
     const menu = {
       about: {
-        name: "About.",
+        name: "01. About",
         ref: React.createRef(),
         to: "#about",
         isInternal: true,
       },
       work: {
-        name: "Work.",
+        name: "02. Work",
         ref: React.createRef(),
         to: "#work",
         isInternal: true,
       },
       skills: {
-        name: "Skills.",
+        name: "03. Skills",
         ref: React.createRef(),
         to: "#skills",
         isInternal: true,
       },
       contact: {
-        name: "Contact.",
+        name: "04. Contact",
         ref: React.createRef(),
         to: "#contact",
         isInternal: true,
       },
       resume: {
-        name: "Resume.",
+        name: "RESUME.",
         ref: React.createRef(),
         to: "/resume.pdf",
         isInternal: false,
@@ -43,6 +44,7 @@ class Navigation extends Component {
     this.toggleMenu = this.toggleMenu.bind(this)
     this.closeMenu = this.closeMenu.bind(this)
     this.checkLocation = this.checkLocation.bind(this)
+    this.onResize = this.onResize.bind(this)
 
     this.state = {
       menu,
@@ -70,6 +72,22 @@ class Navigation extends Component {
     }
   }
 
+  onResize() {
+    // if screen size is large screen
+    // isOpen is always set to false
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      this.setState({
+        isOpen: false,
+      })
+    }
+  }
+
+  componentWillUnmount() {
+    if (window) {
+      window.removeEventListener("resize", this.onResize)
+    }
+  }
+
   componentDidMount() {
     this.checkLocation()
 
@@ -87,6 +105,11 @@ class Navigation extends Component {
         })
       }, 100)
     }
+
+    if (window) {
+      window.addEventListener("resize", this.onResize)
+      this.onResize()
+    }
   }
 
   checkLocation() {
@@ -103,6 +126,12 @@ class Navigation extends Component {
   render() {
     const { isOpen, menu } = this.state
     const navItems = []
+
+    if (isOpen) {
+      disableBodyScroll(this.state.mainTarget)
+    } else {
+      enableBodyScroll(this.state.mainTarget)
+    }
 
     Object.keys(menu).map(item => {
       navItems.push(

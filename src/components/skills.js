@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import Caption from "./caption"
 import "./skills.css"
 import skills from "../data/skills.json"
@@ -24,7 +24,12 @@ const Skills = ({ id }) => {
   const projectItems = []
   projects.map((project, id) => {
     projectItems.push(
-      <a href={project.link} key={id.toString()}>
+      <a
+        href={project.link}
+        key={id.toString()}
+        rel="nofollow noopener noreferrer"
+        target="_blank"
+      >
         <li
           className="project"
           style={{ transitionDelay: `${transitionDelay}ms` }}

@@ -11,6 +11,7 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
+    "body-scroll-lock": "^2.6.1",
     "css-vars-ponyfill": "^2.0.2",
     "font-awesome": "^4.7.0",
     "gatsby": "^2.1.31",
