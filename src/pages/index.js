@@ -38,7 +38,15 @@ export const query = graphql`
       }
     }
 
-    profileImage: file(relativePath: { eq: "me.png" }) {
+    profileImage: file(relativePath: { eq: "me.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 400, maxHeight: 700) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    climbingImage: file(relativePath: { eq: "climbing.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 400, maxHeight: 700) {
           ...GatsbyImageSharpFluid

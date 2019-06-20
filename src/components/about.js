@@ -9,9 +9,11 @@ class About extends Component {
     super(props)
     this.captionNode = React.createRef()
     this.onResize = this.onResize.bind(this)
+    this.toggleCover = this.toggleCover.bind(this)
 
     this.state = {
       captionHeight: "0px",
+      isHovering: false,
     }
   }
 
@@ -42,6 +44,12 @@ class About extends Component {
     }
   }
 
+  toggleCover() {
+    this.setState({
+      isHovering: this.state.isHovering ? false : true,
+    })
+  }
+
   render() {
     const { id, data } = this.props
 
@@ -49,13 +57,32 @@ class About extends Component {
       <section id={id} className="aligner">
         <div className="aligner__item">
           <Caption>
-            <Img
-              style={{
-                height: this.state.captionHeight,
-              }}
-              className="image--cover"
-              fluid={data.profileImage.childImageSharp.fluid}
-            />
+            <div
+              className="image-wrapper"
+              onMouseOver={this.toggleCover}
+              onMouseOut={this.toggleCover}
+              onClick={this.toggleCover}
+            >
+              <div className="image-cover">
+                <Img
+                  className="image-cover__item"
+                  style={{
+                    height: this.state.captionHeight,
+                  }}
+                  fluid={data.profileImage.childImageSharp.fluid}
+                />
+              </div>
+              <div className="image-cover">
+                <Img
+                  className="image-cover__item"
+                  style={{
+                    height: this.state.captionHeight,
+                    opacity: this.state.isHovering ? 1 : 0,
+                  }}
+                  fluid={data.climbingImage.childImageSharp.fluid}
+                />
+              </div>
+            </div>
           </Caption>
           <Caption ref={this.captionNode}>
             <h1
