@@ -89,6 +89,8 @@ class Navigation extends Component {
   }
 
   componentDidMount() {
+    this.scrollArea = document.querySelector(".main")
+
     this.checkLocation()
 
     const hash = this.getLocationHash()
@@ -127,10 +129,12 @@ class Navigation extends Component {
     const { isOpen, menu } = this.state
     const navItems = []
 
-    if (isOpen) {
-      disableBodyScroll(this.state.mainTarget)
-    } else {
-      enableBodyScroll(this.state.mainTarget)
+    if (this.scrollArea) {
+      if (isOpen) {
+        disableBodyScroll(this.scrollArea)
+      } else {
+        enableBodyScroll(this.scrollArea)
+      }
     }
 
     Object.keys(menu).map(item => {
