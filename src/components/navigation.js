@@ -161,7 +161,7 @@ class Navigation extends Component {
             <i className="fa fa-github" />
           </a>
           <a
-            href="https://www.linkedin.com/in/florian-mailliet-30682b183/"
+            href="https://www.linkedin.com/in/florianmailliet/"
             target="_blank"
             rel="nofollow noopener noreferrer"
           >
