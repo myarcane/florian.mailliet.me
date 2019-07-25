@@ -10,25 +10,25 @@ class Navigation extends Component {
 
     const menu = {
       about: {
-        name: "01. About",
+        name: "About",
         ref: React.createRef(),
         to: "#about",
         isInternal: true,
       },
       work: {
-        name: "02. Work",
+        name: "Work",
         ref: React.createRef(),
         to: "#work",
         isInternal: true,
       },
       skills: {
-        name: "03. Skills",
+        name: "Skills",
         ref: React.createRef(),
         to: "#skills",
         isInternal: true,
       },
       contact: {
-        name: "04. Contact",
+        name: "Contact",
         ref: React.createRef(),
         to: "#contact",
         isInternal: true,

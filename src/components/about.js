@@ -123,7 +123,7 @@ class About extends Component {
               I'm originally from Paris but I moved in the south of France 6
               years ago. Highly motivated and passionated about the web, I have
               been crafting digital products for over
-              <span> 10 years</span>. Strongly focused on <span>UI</span>, I
+              <span> 10 years</span>. Strongly focused on <span>UX</span>, I
               like to be involved in innovative projects, interact and share
               knowledge with people with a strong <span>team mindset</span> .
             </p>
@@ -134,9 +134,8 @@ class About extends Component {
               }}
             >
               When I'm not writing or reviewing code, I like to have fun
-              outdoors. My passion number 1 is climbing. I absolutely love it. I
-              also do couple of other sports : open water swimming, cycling,
-              volleyball.
+              outdoors. I love rock climbing and also do couple of other sports
+              : open water swimming, cycling, volleyball.
             </p>
             <p />
             <p
