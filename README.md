@@ -1,6 +1,6 @@
 # My personal SPA
 
-This is the source code for my personal SPA https://flos.site.
+This is the source code for my personal SPA https://florianmailliet.me.
 Build using React & Gatsby.
 
 ## Tech stack
