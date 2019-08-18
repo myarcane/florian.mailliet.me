@@ -6,7 +6,6 @@
 .caption {
   padding-top: 0px;
   padding-left: 2px;
-  opacity: 1;
   max-width: calc(var(--caption-width) - var(--caption-item-margin));
 }
 
@@ -15,7 +14,6 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  opacity: 0.9;
 }
 
 .caption__item h1,

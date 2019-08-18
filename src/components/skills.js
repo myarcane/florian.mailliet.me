@@ -2,7 +2,7 @@ import React from "react"
 import Caption from "./caption"
 import "./skills.css"
 import skills from "../data/skills.json"
-import projects from "../data/projects"
+import ProjectSlider from "./project-slider"
 
 const Skills = ({ id }) => {
   const skillItems = []
@@ -21,25 +21,25 @@ const Skills = ({ id }) => {
     transitionDelay += 80
   })
 
-  const projectItems = []
-  projects.map((project, id) => {
-    projectItems.push(
-      <a
-        href={project.link}
-        key={id.toString()}
-        rel="nofollow noopener noreferrer"
-        target="_blank"
-      >
-        <li
-          className="project"
-          style={{ transitionDelay: `${transitionDelay}ms` }}
-        >
-          {project.title}
-        </li>
-      </a>
-    )
-    transitionDelay += 200
-  })
+  // const projectItems = []
+  // projects.map((project, id) => {
+  //   projectItems.push(
+  //     <a
+  //       href={project.link}
+  //       key={id.toString()}
+  //       rel="nofollow noopener noreferrer"
+  //       target="_blank"
+  //     >
+  //       <li
+  //         className="project"
+  //         style={{ transitionDelay: `${transitionDelay}ms` }}
+  //       >
+  //         {project.title}
+  //       </li>
+  //     </a>
+  //   )
+  //   transitionDelay += 200
+  // })
 
   return (
     <section id={id} className="aligner">
@@ -71,7 +71,7 @@ const Skills = ({ id }) => {
           >
             And simple things <span>built</span> lately for the fun
           </h2>
-          <ul className="skills--grid">{projectItems}</ul>
+          <ProjectSlider />
           <p />
           <p />
         </Caption>
