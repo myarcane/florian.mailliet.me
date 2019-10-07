@@ -13,7 +13,7 @@ Build using React & Gatsby.
 
 ## Sitemap
 
-- [Home](https://flos.site)
+- [Home](https://florianmailliet.me)
 
 ## TODO
 
