@@ -138,15 +138,6 @@ class About extends Component {
               : open water swimming, cycling, volleyball.
             </p>
             <p />
-            <p
-              style={{
-                transitionDelay: "900ms",
-              }}
-            >
-              In <span>March 2019</span>, I started a sabbatical year and I'm
-              currently exploring British Columbia (Canada).
-            </p>
-            <p />
           </Caption>
         </div>
       </section>
