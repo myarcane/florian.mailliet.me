@@ -2,7 +2,6 @@
   "JavaScript (ES6+)",
   "HTML",
   "CSS3+/Sass",
-  "PHP",
   "React",
   "Preact",
   "Redux",
@@ -11,10 +10,9 @@
   "Enzyme",
   "NodeJS",
   "Webpack",
+  "Rollup.js",
   "Babel",
   "npm",
   "RESTful APIs",
-  "GraphQL",
-  "Git",
-  "Jira"
+  "GraphQL"
 ]
