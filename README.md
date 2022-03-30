@@ -1,6 +1,6 @@
 # My personal SPA
 
-This is the source code for my personal SPA https://florianmailliet.me.
+This is the source code for my personal SPA https://florian.mailliet.me.
 Build using React & Gatsby.
 
 ## Tech stack
@@ -13,7 +13,7 @@ Build using React & Gatsby.
 
 ## Sitemap
 
-- [Home](https://florianmailliet.me)
+- [Home](https://florian.mailliet.me)
 
 ## TODO
 
