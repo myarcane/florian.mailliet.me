@@ -46,3 +46,7 @@
 #about h2 span {
   color: var(--highlight-color);
 }
+
+#about .technologies {
+  color: #47a0f7;
+}

@@ -157,7 +157,7 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   /* nav height */
-  padding-top: var(--nav-height);
+  /* padding-top: 50px; */
 }
 
 /* button */
