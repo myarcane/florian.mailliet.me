@@ -171,7 +171,14 @@ class About extends Component {
             <p />
             <p
               style={{
-                transitionDelay: "1000ms",
+                transitionDelay: "2500ms",
+              }}
+            >
+              You can check my github, linkedin or download my resume
+            </p>
+            <p
+              style={{
+                transitionDelay: "2600ms",
               }}
             >
               <a

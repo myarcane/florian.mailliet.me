@@ -2,10 +2,12 @@
   "JavaScript (ES6+)",
   "HTML",
   "CSS3+/Sass",
+  "GraphQL",
   "React",
   "Preact",
   "Redux",
   "Jasmine",
+  "Karma",
   "Jest",
   "Enzyme",
   "NodeJS",
@@ -14,5 +16,5 @@
   "Babel",
   "npm",
   "RESTful APIs",
-  "GraphQL"
+  "Kibana"
 ]
