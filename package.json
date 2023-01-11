@@ -19,7 +19,7 @@
     "gatsby-plugin-manifest": "^4.11.0",
     "gatsby-plugin-sharp": "^4.11.0",
     "gatsby-source-filesystem": "^4.11.0",
-    "gatsby-transformer-remark": "^5.11.0",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^4.11.0",
     "intersection-observer": "^0.7.0",
     "react": "^16.8.4",
