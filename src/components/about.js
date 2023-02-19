@@ -91,7 +91,14 @@ class About extends Component {
       <section id={id} className="aligner">
         <div className="aligner__item">
           <Caption>
-            <div className="image-wrapper" style={{ height: captionHeight }}>
+            <div
+              className="image-wrapper"
+              style={{
+                height: captionHeight,
+                left: "50%",
+                transform: "translateX(-50%)",
+              }}
+            >
               <div className="image-cover">
                 <GatsbyImage
                   alt=""
@@ -101,28 +108,30 @@ class About extends Component {
               </div>
             </div>
           </Caption>
+          <p />
           <Caption ref={this.captionNode}>
-            <h1
-              style={{
-                transitionDelay: "400ms",
-              }}
-            >
-              Hi.
-            </h1>
             <h2
               style={{
                 transitionDelay: "500ms",
               }}
             >
-              my name is <span>Florian Mailliet.</span>
+              My name is <span>Florian Mailliet.</span>
             </h2>
             <p
               style={{
                 transitionDelay: "600ms",
               }}
             >
-              I'm a <span>JavaScript developer</span> based in the Nice Area,
-              France. Currently working @
+              I'm a <span>web developer</span> based in the Toronto area.
+            </p>
+            <p
+              style={{
+                transitionDelay: "650ms",
+              }}
+            >
+              <span>Early 2023</span>, I became a new canadian permanent
+              resident 🇨🇦. Prior to that, I was based in the south of France 🇫🇷
+              and worked @
               <a
                 href="https://www.dailymotion.com"
                 target="_blank"
@@ -130,7 +139,7 @@ class About extends Component {
               >
                 <b>dailymotion </b>
               </a>
-              as a senior Front-end engineer.
+              for 8+ years as a <span>Senior Frontend Engineer</span>.
             </p>
             <p
               style={{
@@ -139,9 +148,9 @@ class About extends Component {
             >
               Highly motivated and passionated about the web, I have been
               crafting digital products for over
-              <span> 10 years</span>. Strongly focused on <span>UX</span>, I
-              like to be involved in innovative projects, interact and share
-              knowledge with people with a strong <span>team mindset</span> .
+              <span> 10 years</span>. I like problem solving, being involved in
+              innovative projects, interact and share knowledge with people with
+              a strong <span>team mindset</span>.
             </p>
             <p />
             <p

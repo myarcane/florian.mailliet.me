@@ -7,15 +7,6 @@ const Contact = ({ id }) => {
     <section id={id} className="aligner">
       <div className="aligner__item">
         <Caption>
-          <h1
-            style={{
-              transitionDelay: "400ms",
-            }}
-          >
-            What's next ?
-          </h1>
-          <p />
-          <p />
           <h2
             style={{
               transitionDelay: "500ms",
@@ -32,6 +23,13 @@ const Contact = ({ id }) => {
               contact me
             </a>{" "}
           </h2>
+          <p
+            style={{
+              transitionDelay: "600ms",
+            }}
+          >
+            Currently open to new opportunities 🤝
+          </p>
           <p />
           <p />
         </Caption>
