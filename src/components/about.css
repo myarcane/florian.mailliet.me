@@ -46,6 +46,7 @@
 /* workaround for safari */
 .image-cover__item img {
   border-radius: 50%;
+  opacity: 1;
 }
 
 #about h2 span {
