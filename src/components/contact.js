@@ -33,8 +33,8 @@ const Contact = ({ id }) => {
           <p />
           <p
             style={{
-              "text-align": "center",
-              "font-size": "12px",
+              textAlign: "center",
+              fontSize: "12px",
               transitionDelay: "700ms",
             }}
           >

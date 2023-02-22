@@ -35,8 +35,6 @@
 }
 
 .image-cover__item {
-  transition-property: transform, opacity;
-  transition-duration: 400ms;
   border-radius: 50%;
   border: 3px solid rgba(136, 146, 176, 0.3);
   width: 100%;
@@ -44,10 +42,9 @@
 }
 
 /* workaround for safari */
-/* .image-cover__item img {
+.image-cover__item img {
   border-radius: 50%;
-  opacity: 1;
-} */
+}
 
 #about h2 span {
   color: var(--highlight-color);

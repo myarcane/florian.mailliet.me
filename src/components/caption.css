@@ -38,6 +38,22 @@
   opacity: 1;
 }
 
+.caption__item .image-cover__item  {
+  opacity:0;
+  transition-property: opacity;
+  transition-duration: 400ms;
+}
+
+.caption.fadein .image-cover__item {
+  opacity:1;
+}
+
+/* there is a bug with GatsbyImage setting the opicity of the img node to 0 with !important.
+This is a ugly? workaround to fix it */
+.caption.fadein .caption__item img {
+  opacity:1 !important;
+}
+
 /* tablet & desktop */
 @media screen and (min-width: 700px) {
   .caption__item {

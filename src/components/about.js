@@ -9,7 +9,6 @@ import projects from "../data/projects.json"
 class About extends Component {
   constructor(props) {
     super(props)
-    this.captionNode = React.createRef()
 
     this.state = {
       skillsAndProjects: [],
@@ -74,7 +73,7 @@ class About extends Component {
             </div>
           </Caption>
           <p />
-          <Caption ref={this.captionNode}>
+          <Caption>
             <h2
               style={{
                 transitionDelay: "500ms",
