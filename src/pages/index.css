@@ -5,7 +5,7 @@
   --link-color: black;
   --h1-color: black;
   --h2-color: rgb(136, 146, 176);
-  --h3-color: #47a0f7;
+  --h3-color: rgb(136, 146, 176);
   --h4-color: black;
   --p-color: black;
   /* titles font family */
@@ -170,7 +170,6 @@ a:hover {
   font-weight: 500;
   line-height: 1.7em;
   transition: all 0.2s;
-  box-shadow: 0 8px 6px -6px #cccccc;
 }
 
 .button:hover {

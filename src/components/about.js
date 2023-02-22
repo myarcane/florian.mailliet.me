@@ -3,7 +3,6 @@ import Caption from "./caption"
 import "./about.css"
 import "./skills.css"
 import { GatsbyImage } from "gatsby-plugin-image"
-import ReactDOM from "react-dom"
 import skills from "../data/skills.json"
 import projects from "../data/projects.json"
 
@@ -11,10 +10,8 @@ class About extends Component {
   constructor(props) {
     super(props)
     this.captionNode = React.createRef()
-    this.onResize = this.onResize.bind(this)
 
     this.state = {
-      captionHeight: "0px",
       skillsAndProjects: [],
     }
 
@@ -52,40 +49,9 @@ class About extends Component {
     })
   }
 
-  onResize() {
-    let captionHeight = getComputedStyle(
-      ReactDOM.findDOMNode(this)
-    ).getPropertyValue("--image-cover-height")
-
-    if (window.matchMedia("(min-width: 700px)").matches) {
-      captionHeight = `${this.captionNode.current.getItemsHeight()}px`
-    }
-
-    this.setState({
-      captionHeight,
-    })
-  }
-
-  componentDidMount() {
-    if (window) {
-      window.addEventListener("resize", this.onResize)
-      setTimeout(() => {
-        this.onResize()
-        // here we set timeout in order for the cover image
-        // to adapt to the caption height
-      }, 200)
-    }
-  }
-
-  componentWillUnmount() {
-    if (window) {
-      window.removeEventListener("resize", this.onResize)
-    }
-  }
-
   render() {
     const { id, data } = this.props
-    const { captionHeight, skillsAndProjects } = this.state
+    const { skillsAndProjects } = this.state
 
     return (
       <section id={id} className="aligner">
@@ -94,7 +60,6 @@ class About extends Component {
             <div
               className="image-wrapper"
               style={{
-                height: captionHeight,
                 left: "50%",
                 transform: "translateX(-50%)",
               }}
@@ -102,7 +67,7 @@ class About extends Component {
               <div className="image-cover">
                 <GatsbyImage
                   alt=""
-                  image={data.climbingImage.childImageSharp.gatsbyImageData}
+                  image={data.profileImage.childImageSharp.gatsbyImageData}
                   className="image-cover__item"
                 />
               </div>
@@ -214,7 +179,6 @@ class About extends Component {
                 <i className="fa fa-2x fa-fw fa-file" />
               </a>{" "}
             </p>
-            <p />
           </Caption>
         </div>
       </section>

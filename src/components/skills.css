@@ -19,7 +19,6 @@
   font-weight: 500;
   line-height: 1.7em;
   color: var(--highlight-color);
-  box-shadow: 0 8px 6px -6px #cccccc;
   transition-property: opacity;
   transition-duration: 400ms;
   transition-timing-function: ease-out;

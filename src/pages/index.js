@@ -36,9 +36,9 @@ export const query = graphql`
         description
       }
     }
-    climbingImage: file(relativePath: { eq: "climbing.jpg" }) {
+    profileImage: file(relativePath: { eq: "profile.jpeg" }) {
       childImageSharp {
-        gatsbyImageData(width: 400, height: 700, layout: CONSTRAINED)
+        gatsbyImageData(width: 460, height: 460, layout: CONSTRAINED)
       }
     }
   }
