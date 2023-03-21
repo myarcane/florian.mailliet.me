@@ -1,18 +1,32 @@
 import React from "react"
 import Caption from "./caption"
 import "./skills.css"
-import skills from "../data/skills.json"
-import projects from "../data/projects"
+import masteringSkills from "../data/mastering-skills.json"
+import projects from "../data/projects.json"
+import learningSkills from "../data/learning-skills.json"
 
 const Skills = ({ id }) => {
   const skillItems = []
   let transitionDelay = 800
 
-  skills.map((skill, id) => {
+  masteringSkills.map((skill, id) => {
     skillItems.push(
       <li
         key={id.toString()}
         className="skill"
+        style={{ transitionDelay: `${transitionDelay}ms` }}
+      >
+        {skill}
+      </li>
+    )
+    transitionDelay += 80
+  })
+
+  learningSkills.map((skill, id) => {
+    skillItems.push(
+      <li
+        key={id.toString()}
+        className="skill__learning"
         style={{ transitionDelay: `${transitionDelay}ms` }}
       >
         {skill}

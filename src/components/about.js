@@ -3,7 +3,8 @@ import Caption from "./caption"
 import "./about.css"
 import "./skills.css"
 import { GatsbyImage } from "gatsby-plugin-image"
-import skills from "../data/skills.json"
+import learningSkills from "../data/learning-skills.json"
+import masteringSkills from "../data/mastering-skills.json"
 import projects from "../data/projects.json"
 
 class About extends Component {
@@ -15,11 +16,24 @@ class About extends Component {
     }
 
     let transitionDelay = 1000
-    skills.forEach((skill, id) => {
+    masteringSkills.forEach((skill, id) => {
       this.state.skillsAndProjects.push(
         <li
           key={`skill-${id.toString()}`}
           className="skill"
+          style={{ transitionDelay: `${transitionDelay}ms` }}
+        >
+          {skill}
+        </li>
+      )
+      transitionDelay += 80
+    })
+
+    learningSkills.forEach((skill, id) => {
+      this.state.skillsAndProjects.push(
+        <li
+          key={id.toString()}
+          className="skill learning"
           style={{ transitionDelay: `${transitionDelay}ms` }}
         >
           {skill}
@@ -94,7 +108,7 @@ class About extends Component {
               }}
             >
               <span>Early 2023</span>, I became a new canadian permanent
-              resident 🇨🇦. Prior to that, I was based in the south of France 🇫🇷
+              resident 🇨🇦. Before that, I was based in the south of France 🇫🇷
               and worked @
               <a
                 href="https://www.dailymotion.com"
@@ -132,9 +146,10 @@ class About extends Component {
                 transitionDelay: "900ms",
               }}
             >
-              Here is few <span className="technologies">technologies</span>{" "}
-              I've been working with and simple things <span>built</span> lately
-              for the fun
+              Here is few technologies I've been{" "}
+              <span className="technologies">working</span> with,{" "}
+              <span className="learning__topics">learning topics</span> or
+              simple things <span>built</span> lately for the fun
             </p>
             <p />
             <div>

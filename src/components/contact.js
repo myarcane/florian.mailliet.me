@@ -38,7 +38,7 @@ const Contact = ({ id }) => {
               transitionDelay: "700ms",
             }}
           >
-            © Florian Mailliet 2019
+            © Florian Mailliet {new Date().getFullYear()}
           </p>
           <p />
         </Caption>

@@ -10,7 +10,8 @@
 }
 
 .skill,
-.project {
+.project,
+.skill__learning {
   margin: 2px;
   padding: 0.3em 1em;
   border: 2px solid;
@@ -27,6 +28,10 @@
 
 .project {
   color: black;
+}
+
+.learning {
+  color:rgb(136, 146, 176)
 }
 
 .project:hover {
