@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import "./index.css"
 import "font-awesome/css/font-awesome.min.css"
 import Contact from "../components/contact"
 import About from "../components/about"
