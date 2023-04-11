@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import Caption from "./caption"
-import "./index.css"
 import "./about.css"
 import "./skills.css"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -138,8 +137,8 @@ class About extends Component {
               }}
             >
               When I'm not writing or reviewing code, I like to have fun
-              outdoors. I love rock climbing and also do couple of other sports
-              : open water swimming, cycling, volleyball.
+              outdoors. I love rock climbing and do couple of other sports :
+              open water swimming, cycling, volleyball.
             </p>
             <p />
             <p

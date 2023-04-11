@@ -1,31 +1,18 @@
 import React from "react"
 import { graphql } from "gatsby"
-import "./index.css"
+import "./font.css"
 import "font-awesome/css/font-awesome.min.css"
 import Contact from "../components/contact"
 import About from "../components/about"
 import cssVars from "css-vars-ponyfill"
-import { Helmet } from "react-helmet"
+import { HelmetIndex } from "../components/helmet-index"
 
 cssVars()
 
-const HomePage = ({ data, location }) => {
-  // console.log("pathname", location.pathname, data)
-
-  // if (location.pathname === "/") {
-  //   console.log("loading css")
-  //   // require("./index.css")
-  // } else {
-  //   console.log("not loading css")
-  // }
-
-  const { title } = data.site.siteMetadata
-
+const HomePage = ({ data }) => {
   return (
     <div>
-      <Helmet>
-        <title>{title}</title>
-      </Helmet>
+      <HelmetIndex data={data} />
       <div className="layout">
         <main className="main">
           <About id="about" data={data} />

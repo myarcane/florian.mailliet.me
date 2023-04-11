@@ -1,8 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Florian Mailliet | Front-End developer",
-    description:
-      "I'm a JavaScript Front-end developer currently living in the south of France",
+    title: "Florian Mailliet | Web developer",
+    description: "I'm a JavaScript web developer currently living in Canada",
   },
   plugins: [
     {
