@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import Caption from "./caption"
+import "./index.css"
 import "./about.css"
 import "./skills.css"
 import { GatsbyImage } from "gatsby-plugin-image"
