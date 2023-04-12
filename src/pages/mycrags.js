@@ -12,6 +12,7 @@ const MyCragsPage = () => {
   return isPageLoaded ? (
     <>
       <HelmetMyCrags />
+      <h4>My climbing crags ⛰️</h4>
       <form id="submit-new-parking" method="post">
         <div className="row">
           <div className="four columns">
