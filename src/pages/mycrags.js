@@ -1,9 +1,15 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { HelmetMyCrags } from "../components/helmet-my-crags"
 import "./mycrags.css"
 
 const MyCragsPage = () => {
-  return (
+  const [isPageLoaded, setPageLoaded] = useState(false)
+
+  useEffect(() => {
+    setPageLoaded(true)
+  }, [])
+
+  return isPageLoaded ? (
     <>
       <HelmetMyCrags />
       <form id="submit-new-parking" method="post">
@@ -63,7 +69,7 @@ const MyCragsPage = () => {
         <tbody />
       </table>
     </>
-  )
+  ) : null
 }
 
 export default MyCragsPage
