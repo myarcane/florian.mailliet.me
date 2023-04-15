@@ -47,7 +47,7 @@ class About extends Component {
         <a
           href={project.link}
           key={`project-${id.toString()}`}
-          rel="nofollow noopener noreferrer"
+          rel="noopener noreferrer nofollow"
           target="_blank"
         >
           <li
@@ -113,7 +113,7 @@ class About extends Component {
               <a
                 href="https://www.dailymotion.com"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
               >
                 <b>dailymotion </b>
               </a>
@@ -172,7 +172,7 @@ class About extends Component {
               <a
                 href="https://github.com/myarcane"
                 target="_blank"
-                rel="nofollow noopener noreferrer"
+                rel="noopener noreferrer nofollow"
               >
                 <i className="fa fa-2x fa-fw fa-github" aria-hidden="true" />
               </a>{" "}
@@ -180,7 +180,7 @@ class About extends Component {
               <a
                 href="https://fr.linkedin.com/in/florianmailliet"
                 target="_blank"
-                rel="nofollow noopener noreferrer"
+                rel="noopener noreferrer nofollow"
               >
                 <i className="fa fa-2x fa-fw fa-linkedin" />
               </a>{" "}
@@ -188,7 +188,7 @@ class About extends Component {
               <a
                 href="/resume.pdf"
                 target="_blank"
-                rel="nofollow noopener noreferrer"
+                rel="noopener noreferrer nofollow"
               >
                 <i className="fa fa-2x fa-fw fa-file" />
               </a>{" "}

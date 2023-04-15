@@ -41,7 +41,7 @@ const Skills = ({ id }) => {
       <a
         href={project.link}
         key={id.toString()}
-        rel="nofollow noopener noreferrer"
+        rel="noopener noreferrer nofollow"
         target="_blank"
       >
         <li

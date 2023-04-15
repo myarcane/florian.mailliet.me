@@ -74,7 +74,7 @@ const MyCragsPage = () => {
           <tr>
             <th>Site's name - parking's name</th>
             <th>Coordinates</th>
-            <th>Access crags</th>
+            <th>Access the following crags</th>
           </tr>
           <CragParkingTable parkingsData={parkingsData} />
         </thead>
