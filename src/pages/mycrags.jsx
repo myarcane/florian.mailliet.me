@@ -1,15 +1,26 @@
 import React, { useState, useEffect } from "react"
 import { HelmetMyCrags } from "../components/helmet-my-crags"
 import "./mycrags.css"
+import { CragParkingTable } from "../components/crag-parking-table"
 
 const MyCragsPage = () => {
-  const [isPageLoaded, setPageLoaded] = useState(false)
+  const [parkingsData, setParkingsData] = useState(null)
+
+  const getMyCrags = async () => {
+    try {
+      const response = await fetch("/.netlify/functions/get-my-crags")
+      const jsonData = await response.json()
+      setParkingsData(jsonData)
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   useEffect(() => {
-    setPageLoaded(true)
+    getMyCrags()
   }, [])
 
-  return isPageLoaded ? (
+  return parkingsData ? (
     <>
       <HelmetMyCrags />
       <h4>My climbing crags ⛰️</h4>
@@ -31,17 +42,17 @@ const MyCragsPage = () => {
               className="u-full-width"
               type="text"
               required
-              placeholder="e.g: Peillon - déchetterie"
+              placeholder="e.g: Céüse - Parking 1"
               id="parking-name"
             />
           </div>
-          <div class="four columns">
+          <div className="four columns">
             <label htmlFor="parking-geo">Coordinates (UTM, decimal...) *</label>
             <input
               className="u-full-width"
               type="text"
               required
-              placeholder="e.g: 32T 371089 4848971"
+              placeholder="e.g: 44.4991,5.9366"
               id="parking-geo"
             />
           </div>
@@ -49,7 +60,7 @@ const MyCragsPage = () => {
         <label htmlFor="crags-list">Easy access to the following crags</label>
         <textarea
           className="u-full-width"
-          placeholder="e.g: Baus Roux, Gros Bernard"
+          placeholder="e.g: Berlin, Biographie"
           id="crags-list"
         />
         <input
@@ -58,14 +69,14 @@ const MyCragsPage = () => {
           value="Submit new parking"
         />
       </form>
-      <table id="parkings-list" class="u-full-width">
+      <table id="parkings-list" className="u-full-width">
         <thead>
           <tr>
-            <th>Country</th>
             <th>Site's name - parking's name</th>
             <th>Coordinates</th>
             <th>Access crags</th>
           </tr>
+          <CragParkingTable parkingsData={parkingsData} />
         </thead>
         <tbody />
       </table>
