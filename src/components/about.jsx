@@ -139,9 +139,12 @@ class About extends Component {
             >
               When I'm not writing or reviewing code, I like to have fun
               outdoors. I love rock climbing. Here is a sample of the{" "}
-              <Link to="/mycrags">climbing areas</Link> I visited recently. I
-              also do couple of other sports : open water swimming, cycling,
-              volleyball.
+              <Link to="/mycrags">
+                climbing crags{" "}
+                <i className="fa fa-map-marker" aria-hidden="true" />
+              </Link>{" "}
+              I visited recently. I also do couple of other sports : open water
+              swimming, cycling, volleyball.
             </p>
             <p />
             <p
