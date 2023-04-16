@@ -18,7 +18,7 @@ const Contact = ({ id }) => {
               className="button"
               href="mailto:florian@mailliet.me"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
             >
               contact me
             </a>{" "}

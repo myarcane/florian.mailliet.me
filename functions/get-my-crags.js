@@ -3,7 +3,7 @@ const { Octokit } = require("@octokit/rest")
 
 const GITHUB_OWNER = "myarcane"
 const GITHUB_REPO = "my-portfolio"
-const JSON_PATH = "/src/data/my-crags.json"
+const JSON_PATH = "my-crags.json"
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN
 
