@@ -6,6 +6,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import learningSkills from "../data/learning-skills.json"
 import masteringSkills from "../data/mastering-skills.json"
 import projects from "../data/projects.json"
+import { Link } from "gatsby"
 
 class About extends Component {
   constructor(props) {
@@ -137,8 +138,10 @@ class About extends Component {
               }}
             >
               When I'm not writing or reviewing code, I like to have fun
-              outdoors. I love rock climbing and do couple of other sports :
-              open water swimming, cycling, volleyball.
+              outdoors. I love rock climbing. Here is a sample of the{" "}
+              <Link to="/mycrags">climbing areas</Link> I visited recently. I
+              also do couple of other sports : open water swimming, cycling,
+              volleyball.
             </p>
             <p />
             <p
