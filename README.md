@@ -1,6 +1,6 @@
 # My personal web page
 
-This is the source code for my personal SPA https://florian.mailliet.me.
+This is the source code for my personal web page https://florian.mailliet.me.
 Build using React & Gatsby.
 
 ## Tech stack
