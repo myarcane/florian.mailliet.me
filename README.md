@@ -1,7 +1,7 @@
 # My personal web page
 
 This is the source code for my personal web page https://florian.mailliet.me.
-Build using React & Gatsby.
+Built using React & Gatsby.
 
 ## Tech stack
 
