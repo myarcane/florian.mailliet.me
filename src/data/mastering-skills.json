@@ -1,10 +1,9 @@
 [
-  "JavaScript (ES6+)",
+  "JavaScript (ES2015+)",
   "HTML",
   "CSS3+/Sass",
   "GraphQL",
   "React",
-  "Preact",
   "Redux",
   "Jasmine",
   "Karma",
@@ -15,7 +14,7 @@
   "Webpack",
   "Rollup.js",
   "Babel",
-  "npm",
+  "Docker",
   "RESTful APIs",
   "Kibana",
   "WebPageTest"
