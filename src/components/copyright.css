@@ -1,17 +1,17 @@
 /* variables */
-#contact {
+#copyright {
   /* very small phones */
   --button-font-size: 16px;
   --h2-font-size: 18px;
 }
 
 @media screen and (min-width: 400px) {
-  #contact {
+  #copyright {
     --button-font-size: 21px;
     --h2-font-size: 24px;
   }
 }
 
-#contact.aligner {
-  margin-top: 50px;
+#copyright.aligner {
+  margin-top: 30px;
 }

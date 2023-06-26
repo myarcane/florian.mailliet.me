@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import "./font.css"
 import "font-awesome/css/font-awesome.min.css"
-import Contact from "../components/contact"
+import Copyright from "../components/copyright"
 import About from "../components/about"
 import cssVars from "css-vars-ponyfill"
 import { HelmetIndex } from "../components/helmet-index"
@@ -16,7 +16,7 @@ const HomePage = ({ data }) => {
       <div className="layout">
         <main className="main">
           <About id="about" data={data} />
-          <Contact id="contact" data={data} />
+          <Copyright id="copyright" data={data} />
         </main>
       </div>
     </div>

@@ -6,19 +6,20 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import learningSkills from "../data/learning-skills.json"
 import masteringSkills from "../data/mastering-skills.json"
 import projects from "../data/projects.json"
-import { Link } from "gatsby"
 
 class About extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      skillsAndProjects: [],
+      masteringSkills: [],
+      learningSkills: [],
+      projects: [],
     }
 
     let transitionDelay = 1000
     masteringSkills.forEach((skill, id) => {
-      this.state.skillsAndProjects.push(
+      this.state.masteringSkills.push(
         <li
           key={`skill-${id.toString()}`}
           className="skill"
@@ -31,7 +32,7 @@ class About extends Component {
     })
 
     learningSkills.forEach((skill, id) => {
-      this.state.skillsAndProjects.push(
+      this.state.learningSkills.push(
         <li
           key={id.toString()}
           className="skill learning"
@@ -44,7 +45,7 @@ class About extends Component {
     })
 
     projects.forEach((project, id) => {
-      this.state.skillsAndProjects.push(
+      this.state.projects.push(
         <a
           href={project.link}
           key={`project-${id.toString()}`}
@@ -65,7 +66,7 @@ class About extends Component {
 
   render() {
     const { id, data } = this.props
-    const { skillsAndProjects } = this.state
+    const { masteringSkills, learningSkills, projects } = this.state
 
     return (
       <section id={id} className="aligner">
@@ -147,27 +148,48 @@ class About extends Component {
                 transitionDelay: "900ms",
               }}
             >
-              Here is few technologies I've been{" "}
-              <span className="technologies">working</span> with,{" "}
-              <span className="learning__topics">learning topics</span> or
-              simple things <span>built</span> lately for the fun
+              Here are a few technologies I've been{" "}
+              <span className="technologies">working</span> with
             </p>
             <p />
             <div>
-              <ul className="skills--grid">{skillsAndProjects}</ul>
+              <ul className="skills--grid">{masteringSkills}</ul>
             </div>
-            <p />
             <p />
             <p
               style={{
                 transitionDelay: "2500ms",
               }}
             >
-              You can check my github, linkedin or download my resume
+              learning topics 👨‍💻
             </p>
+            <div>
+              <ul className="skills--grid">{learningSkills}</ul>
+            </div>
+            <p />
+            <p
+              style={{
+                transitionDelay: "2500ms",
+              }}
+            >
+              Or simple things built lately for the fun ⚙️
+            </p>
+            <div>
+              <ul className="skills--grid">{projects}</ul>
+            </div>
+            <p />
+            <p />
             <p
               style={{
                 transitionDelay: "2600ms",
+              }}
+            >
+              You can check my github, linkedin, download my resume or send me
+              an email
+            </p>
+            <p
+              style={{
+                transitionDelay: "3000ms",
               }}
             >
               <a
@@ -192,6 +214,10 @@ class About extends Component {
                 rel="noopener noreferrer nofollow"
               >
                 <i className="fa fa-2x fa-fw fa-file" />
+              </a>{" "}
+              +
+              <a href="mailto:florian@mailliet.me">
+                <i className="fa fa-2x fa-fw fa fa-envelope" />
               </a>{" "}
             </p>
           </Caption>

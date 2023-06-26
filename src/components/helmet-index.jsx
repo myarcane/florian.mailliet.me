@@ -27,7 +27,7 @@ export const HelmetIndex = ({ data }) => {
             --h2-font-size: 24px;
             --h3-font-size: 14px;
             --h4-font-size: 16px;
-            --p-font-size: 16px;
+            --p-font-size: 14px;
             --menu-height: 50px;
             /* button font size */
             --button-font-size: 20px;
