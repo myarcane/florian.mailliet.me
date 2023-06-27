@@ -108,11 +108,13 @@ export const HelmetIndex = ({ data }) => {
              color: var(--link-color);
              text-decoration: none;
            }
-           
-           a:hover {
-             color: var(--highlight-color);
+
+           @media (hover: hover) {
+            a:hover {
+              color: var(--highlight-color);
+            }
            }
-  
+           
            .layout {
              width: 100%;
            }
@@ -137,41 +139,7 @@ export const HelmetIndex = ({ data }) => {
              /* nav height */
              /* padding-top: 50px; */
            }
-           
-           
-           .button {
-             position: relative;
-             padding: 0.3em 1em;
-             border: 2px solid;
-             border-radius: 3px;
-             font-size: var(--button-font-size);
-             font-weight: 500;
-             line-height: 1.7em;
-             transition: all 0.2s;
-           }
-           
-           .button:hover {
-             padding: 0.3em 2em 0.3em 1em;
-             border: 2px solid;
-           }
-           
-           .button:after {
-             border-right: 2px solid;
-             border-bottom: 2px solid;
-             opacity: 0;
-             display: inline-block;
-             content: "";
-             position: absolute;
-             width: var(--button-arrow-size);
-             height: var(--button-arrow-size);
-             top: calc((100% - var(--button-arrow-size)) / 2);
-             transform: rotate(-45deg);
-           }
-           
-           .button:hover:after {
-             margin-left: 10px;
-             opacity: 1;
-           }
+
            
         `}
       </style>

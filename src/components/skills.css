@@ -31,11 +31,13 @@
 }
 
 .learning {
-  color:rgb(136, 146, 176)
+  color: rgb(136, 146, 176);
 }
 
-.project:hover {
-  color: var(--highlight-color);
+@media (hover: hover) {
+  .project:hover {
+    color: var(--highlight-color);
+  }
 }
 
 .caption.fadein .skill,

@@ -51,6 +51,7 @@ class About extends Component {
           key={`project-${id.toString()}`}
           rel="noopener noreferrer nofollow"
           target="_blank"
+          onTouchEnd={() => {}}
         >
           <li
             className="project"
@@ -115,7 +116,8 @@ class About extends Component {
               <a
                 href="https://www.dailymotion.com"
                 target="_blank"
-                rel="noopener noreferrer nofollow"
+                rel="noreferrer nofollow"
+                onTouchEnd={() => {}}
               >
                 <b>dailymotion </b>
               </a>
@@ -196,6 +198,7 @@ class About extends Component {
                 href="https://github.com/myarcane"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
+                onTouchEnd={() => {}}
               >
                 <i className="fa fa-2x fa-fw fa-github" aria-hidden="true" />
               </a>{" "}
@@ -204,6 +207,7 @@ class About extends Component {
                 href="https://fr.linkedin.com/in/florianmailliet"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
+                onTouchEnd={() => {}}
               >
                 <i className="fa fa-2x fa-fw fa-linkedin" />
               </a>{" "}
@@ -212,6 +216,7 @@ class About extends Component {
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
+                onTouchEnd={() => {}}
               >
                 <i className="fa fa-2x fa-fw fa-file" />
               </a>{" "}
