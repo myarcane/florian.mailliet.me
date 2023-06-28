@@ -17,6 +17,4 @@ Built using React & Gatsby.
 
 ## TODO
 
-- [ ] Migrate content in JSON files
-- [ ] Add a footer
-- [ ] Turn into a progressive web app
+- [ ] Migrate to next.js instead of Gatsby

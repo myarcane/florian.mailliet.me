@@ -1,8 +1,8 @@
 import React from "react"
-import Caption from "./caption"
+import { Caption } from "./caption"
 import "./copyright.css"
 
-const Copyright = ({ id }) => {
+export const Copyright = ({ id }) => {
   return (
     <section id={id} className="aligner">
       <div className="aligner__item">
@@ -22,5 +22,3 @@ const Copyright = ({ id }) => {
     </section>
   )
 }
-
-export default Copyright

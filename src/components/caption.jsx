@@ -1,76 +1,47 @@
-import React, { Component } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import "./caption.css"
 
-class Caption extends Component {
-  constructor(props) {
-    super(props)
-
-    this.captionNode = React.createRef()
-    this.captionItems = React.createRef()
-    this.getItemsHeight = this.getItemsHeight.bind(this)
-
-    this.state = {
-      isIntersecting: false,
-      nodeHeight: 0,
-    }
+export const Caption = ({ children }) => {
+  const captionNode = useRef(null)
+  const captionItems = useRef(null)
+  const [isIntersecting, setIsIntersecting] = useState(false)
+  const getItemsHeight = () => {
+    const node = captionItems.current
+    return node.getBoundingClientRect().height
   }
+  useEffect(() => {
+    const onChange = (changes, observer) => {
+      changes.forEach(change => {
+        if (change.intersectionRatio >= 0.2) {
+          setIsIntersecting(true)
+        }
+      })
+    }
 
-  componentDidMount() {
+    const options = {
+      root: null, // relative to document viewport
+      rootMargin: "0px", // margin around root. Values are similar to css property. Unitless values not allowed
+      threshold: 0.2, // visible amount of item shown in relation to root
+    }
+
     if ("IntersectionObserver" in window) {
-      const node = this.captionNode.current
-
-      const options = {
-        root: null, // relative to document viewport
-        rootMargin: "0px", // margin around root. Values are similar to css property. Unitless values not allowed
-        threshold: 0.2, // visible amount of item shown in relation to root
-      }
-
-      const onChange = (changes, observer) => {
-        changes.forEach(change => {
-          if (change.intersectionRatio >= 0.2) {
-            this.setState({
-              isIntersecting: true,
-            })
-
-            if (this.props.onIntersecting) {
-              this.props.onIntersecting()
-            }
-          }
-        })
-      }
+      const node = captionNode.current
 
       const observer = new IntersectionObserver(onChange, options)
       observer.observe(node)
     } else {
-      this.setState({
-        isIntersecting: true,
-      })
-
-      if (this.props.onIntersecting) {
-        this.props.onIntersecting()
-      }
+      setIsIntersecting(true)
     }
-  }
+  }, [])
 
-  getItemsHeight() {
-    const node = this.captionItems.current
-    return node.getBoundingClientRect().height
-  }
-
-  render() {
-    const { isIntersecting } = this.state
-    const { children } = this.props
-    return (
-      <div
-        ref={this.captionNode}
-        className={`caption ${isIntersecting ? "fadein" : ""}`}
-      >
-        <div ref={this.captionItems} className="caption__item">
-          {children}
-        </div>
+  return (
+    <div
+      ref={captionNode}
+      className={`caption ${isIntersecting ? "fadein" : ""}`}
+    >
+      <div ref={captionItems} className="caption__item">
+        {children}
       </div>
-    )
-  }
+    </div>
+  )
 }
-
-export default Caption
