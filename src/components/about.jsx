@@ -107,15 +107,16 @@ export const About = ({ id, data }) => {
               transitionDelay: "600ms",
             }}
           >
-            I'm a <span>web developer</span> based in the Toronto area.
+            I am a <span>web developer</span> based in Toronto 📍
           </p>
           <p
             style={{
               transitionDelay: "650ms",
             }}
           >
-            <span>Early 2023</span>, I became a new canadian permanent resident
-            🇨🇦. Before that, I was based in the south of France 🇫🇷 and worked @
+            In early <span>2023</span>, I became a new Canadian permanent
+            resident 🇨🇦. Before that, I was based in the south of France 🇫🇷 and
+            worked @
             <a
               href="https://www.dailymotion.com"
               target="_blank"
@@ -131,11 +132,11 @@ export const About = ({ id, data }) => {
               transitionDelay: "700ms",
             }}
           >
-            Highly motivated and passionated about the web, I have been crafting
-            digital products for over
-            <span> 10 years</span>. I like problem solving, being involved in
-            innovative projects, interact and share knowledge with people with a
-            strong <span>team mindset</span>.
+            Highly motivated and passionate about the web, I have been crafting
+            digital products for the past
+            <span> 10+ years</span>. I enjoy problem-solving, being involved in
+            innovative projects, interacting, and sharing knowledge with people
+            who have a strong <span>team mindset</span>.
           </p>
           <p />
           <p
@@ -143,9 +144,9 @@ export const About = ({ id, data }) => {
               transitionDelay: "800ms",
             }}
           >
-            When I'm not writing or reviewing code, I like to have fun outdoors.
-            I love rock climbing. I also do couple of other sports : open water
-            swimming, cycling, volleyball.
+            When I am not writing or reviewing code, I like to have fun
+            outdoors. I love rock climbing. I also practice a couple of other
+            sports: open water swimming, cycling, and volleyball.
           </p>
           <p />
           <p
