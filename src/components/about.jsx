@@ -125,7 +125,7 @@ export const About = ({ id, data }) => {
             >
               <b>dailymotion </b>
             </a>
-            for 8+ years as a <span>Senior Frontend Engineer</span>.
+            as a <span>Senior Frontend Engineer</span>.
           </p>
           <p
             style={{
