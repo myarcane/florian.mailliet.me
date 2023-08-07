@@ -125,7 +125,7 @@ export const About = ({ id, data }) => {
             >
               <b>dailymotion </b>
             </a>
-            as a <span>Senior Frontend Engineer</span>.
+            as a <span>Senior front-end engineer</span>.
           </p>
           <p
             style={{
