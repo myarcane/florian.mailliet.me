@@ -16,7 +16,7 @@
   "Rollup.js",
   "Babel",
   "Docker",
+  "AWS Lambda",
   "RESTful APIs",
-  "Kibana",
-  "WebPageTest"
+  "Kibana"
 ]
