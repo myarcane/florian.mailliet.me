@@ -2,7 +2,6 @@
   "JavaScript (ES2015+)",
   "HTML",
   "CSS3+/Sass",
-  "GraphQL",
   "React",
   "Redux",
   "Next.js",
@@ -16,7 +15,8 @@
   "Rollup.js",
   "Babel",
   "Docker",
-  "AWS Lambda",
+  "AWS",
   "RESTful APIs",
+  "GraphQL",
   "Kibana"
 ]

@@ -115,8 +115,8 @@ export const About = ({ id, data }) => {
             }}
           >
             In early <span>2023</span>, I became a new Canadian permanent
-            resident 🇨🇦. Before that, I was based in the south of France 🇫🇷 and
-            worked @
+            resident 🇨🇦. Prior to this, I was based in the south of France 🇫🇷
+            and worked @
             <a
               href="https://www.dailymotion.com"
               target="_blank"
@@ -125,18 +125,18 @@ export const About = ({ id, data }) => {
             >
               <b>dailymotion </b>
             </a>
-            as a <span>Senior front-end engineer</span>.
+            as a <span>Senior Front-End Engineer</span>.
           </p>
           <p
             style={{
               transitionDelay: "700ms",
             }}
           >
-            Highly motivated and passionate about the web, I have been crafting
-            digital products for the past
-            <span> 10+ years</span>. I enjoy problem-solving, being involved in
-            innovative projects, interacting, and sharing knowledge with people
-            who have a strong <span>team mindset</span>.
+            With a strong drive and a deep passion for the <span>internet</span>
+            , I have been crafting web applications for the past{" "}
+            <span>10+ years</span>. I like problem-solving, participating in
+            groundbreaking initiatives and sharing knowledge with individuals
+            who prioritize <span>teamwork</span>.
           </p>
           <p />
           <p
@@ -222,7 +222,7 @@ export const About = ({ id, data }) => {
               rel="noopener noreferrer nofollow"
               onTouchEnd={() => {}}
             >
-              <i className="fa fa-2x fa-fw fa-file" />
+              <i className="fa fa-2x fa-fw fa-download" />
             </a>{" "}
             +
             <a href="mailto:florian@mailliet.me">
