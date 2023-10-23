@@ -66,7 +66,7 @@ export const About = ({ id, data }) => {
                 1400}ms`,
             }}
           >
-            {project.title}
+            {project.title} <span>&#8599;</span>
           </li>
         </a>,
       ])
@@ -95,13 +95,13 @@ export const About = ({ id, data }) => {
         </Caption>
         <p />
         <Caption>
-          <h2
+          <h1
             style={{
               transitionDelay: "500ms",
             }}
           >
-            My name is <span>Florian Mailliet.</span>
-          </h2>
+            My name is <span>Florian.</span>
+          </h1>
           <p
             style={{
               transitionDelay: "600ms",
@@ -125,7 +125,7 @@ export const About = ({ id, data }) => {
             >
               <b>dailymotion </b>
             </a>
-            as a <span>Senior Front-End Engineer</span>.
+            as a <span>Senior Frontend Engineer</span>.
           </p>
           <p
             style={{
@@ -149,14 +149,14 @@ export const About = ({ id, data }) => {
             sports: open water swimming, cycling, and volleyball.
           </p>
           <p />
-          <p
+          <h2
             style={{
               transitionDelay: "900ms",
             }}
           >
             Here are a few technologies I've been{" "}
             <span className="technologies">working</span> with
-          </p>
+          </h2>
           <p />
           <div>
             <ul className="skills--grid">{masteringSkillsElements}</ul>
@@ -173,13 +173,13 @@ export const About = ({ id, data }) => {
             <ul className="skills--grid">{learningSkillsElements}</ul>
           </div>
           <p />
-          <p
+          <h2
             style={{
               transitionDelay: "2500ms",
             }}
           >
-            Or simple things built lately for the fun ⚙️
-          </p>
+            Or simple things built lately for the <span>fun ⚙️</span>
+          </h2>
           <div>
             <ul className="skills--grid">{projectsElements}</ul>
           </div>
@@ -228,6 +228,60 @@ export const About = ({ id, data }) => {
             <a href="mailto:florian@mailliet.me">
               <i className="fa fa-2x fa-fw fa fa-envelope" />
             </a>{" "}
+          </p>
+          <p />
+          <p />
+          <h2
+            style={{
+              transitionDelay: "3200ms",
+            }}
+          >
+            What is it like <span>working</span> with me?
+          </h2>
+          <p
+            style={{
+              transitionDelay: "3200ms",
+            }}
+          >
+            “Florian is not only a highly experienced front-end engineer, he is
+            also a great team player and human being. I worked with him for
+            almost 10 years in Dailymotion Video Player team; first as a peer
+            front-end engineer, then lately as his direct manager. He is one of
+            the most reliable front-end engineer I had the chance to work with.
+            Always commited to deliver high-quality product, able to dig into
+            really complex technical topics, come-up with a clean solution that
+            will fit the needs. In addition, he’s always eager to share his
+            knowledge with his team and stakeholders. He was a trustable
+            teammate over the years and demonstrated his skills on many
+            occasions, would that be on the codebase itself or through his
+            collaborations with stakeholders in other teams such as Product,
+            Design, Backend or Data. I recommend him without any hesitation. ”
+          </p>
+          <p style={{ textAlign: "right", transitionDelay: "3200ms" }}>
+            <a href="https://fr.linkedin.com/in/audard">Olivier Audard</a>,
+            Engineering Director @Dailymotion
+          </p>
+
+          <p />
+          <p
+            style={{
+              transitionDelay: "3200ms",
+            }}
+          >
+            I've worked with Florian on the Dailymotion HTML5 player during 3
+            years and I've really appreciated his sense of details. He is the
+            kind of person to fully size a problem before working on a solution,
+            ensuring every scenarios will be handled properly. Whenever he was
+            working on a UX feature, he makes sure to provide the best
+            experience to user, with a particular attention to performance so it
+            doesn't feel laggish. Doing a user interface that works on every
+            mobile browsers, including some low-end devices stuck with Chrome
+            30, in a country where EDGE connection is the norm, is not an easy
+            task. Florian was able to fully achieve it.
+          </p>
+          <p style={{ textAlign: "right", transitionDelay: "3200ms" }}>
+            <a href="https://ca.linkedin.com/in/michael-vial">Michael Vial</a>,
+            Eng. Manager @Busbud
           </p>
         </Caption>
       </div>

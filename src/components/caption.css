@@ -4,7 +4,7 @@
 }
 
 .caption {
-  padding-top: 0px;
+  padding-top: 20px;
   padding-left: 2px;
   opacity: 1;
   max-width: calc(var(--caption-width) - var(--caption-item-margin));
@@ -38,20 +38,20 @@
   opacity: 1;
 }
 
-.caption__item .image-cover__item  {
-  opacity:0;
+.caption__item .image-cover__item {
+  opacity: 0;
   transition-property: opacity;
   transition-duration: 400ms;
 }
 
 .caption.fadein .image-cover__item {
-  opacity:1;
+  opacity: 1;
 }
 
 /* there is a bug with GatsbyImage setting the opicity of the img node to 0 with !important.
 This is a ugly? workaround to fix it */
 .caption.fadein .caption__item img {
-  opacity:1 !important;
+  opacity: 1 !important;
 }
 
 /* tablet & desktop */

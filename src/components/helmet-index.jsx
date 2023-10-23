@@ -66,6 +66,8 @@ export const HelmetIndex = ({ data }) => {
            }
            
            h2 {
+            border-top: 1px solid rgba(136, 146, 176, 0.3);
+             padding-top: 40px;
              font-family: var(--titles-font-family);
              font-weight: 400;
              font-size: var(--h2-font-size);
@@ -120,7 +122,6 @@ export const HelmetIndex = ({ data }) => {
            }
            
            .main {
-             top: 20px;
              width: 100%;
              overflow: hidden;
              position: absolute;
