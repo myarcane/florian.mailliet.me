@@ -12,7 +12,7 @@ export const Caption = ({ children }) => {
   useEffect(() => {
     const onChange = (changes, observer) => {
       changes.forEach(change => {
-        if (change.intersectionRatio >= 0.2) {
+        if (change.intersectionRatio >= 0.1) {
           setIsIntersecting(true)
         }
       })
