@@ -28,6 +28,18 @@
 
 .project {
   color: black;
+  border-radius: 0px;
+  margin: 7px;
+  padding: 0px;
+  border: none;
+  line-height: normal;
+  border-bottom: 1px solid;
+}
+
+.project > * {
+  font-weight: bold;
+  font-size: 14px;
+  font-family: var(--titles-font-family);
 }
 
 .learning {
