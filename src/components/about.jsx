@@ -52,8 +52,8 @@ export const About = ({ id, data }) => {
             }}
           >
             In early <span>2023</span>, I became a new Canadian permanent
-            resident 🇨🇦. Before that, I was located in the south of France 🇫🇷
-            and held the position of Senior Frontend Engineer at{" "}
+            resident. Before that, I was located in the south of France and held
+            the position of Senior Frontend Engineer at{" "}
             <a
               href="https://www.dailymotion.com"
               target="_blank"
@@ -69,11 +69,10 @@ export const About = ({ id, data }) => {
               transitionDelay: "700ms",
             }}
           >
-            With a strong drive and a deep passion the online world, I have been
-            crafting web applications for the past <span>10+ years</span>. I
-            enjoy tackling challenges, contributing to innovative projects, and
-            exchanging knowledge with those who value <span>collaboration</span>
-            .{" "}
+            I have been crafting web applications for the past{" "}
+            <span>10+ years</span>. I enjoy tackling new challenges,
+            contributing to innovative projects, and sharing knowledge with
+            folks who appreciate <span>teamwork</span>.{" "}
           </p>
           <p />
           <p
