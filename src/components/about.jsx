@@ -90,7 +90,7 @@ export const About = ({ id, data }) => {
             }}
           >
             For those who don't speak French and are curious about the
-            pronunciation of my name, I stumbled upon this{" "}
+            pronunciation of my name /flɔ.ʁjɑ̃/, I stumbled upon this{" "}
             <a
               href="https://www.youtube.com/watch?v=jiz_A97JSJc"
               target="_blank"
