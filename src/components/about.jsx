@@ -71,8 +71,8 @@ export const About = ({ id, data }) => {
           >
             I have been crafting web applications for the past{" "}
             <span>10+ years</span>. I enjoy tackling new challenges,
-            contributing to innovative projects, and sharing knowledge with
-            folks who appreciate <span>teamwork</span>.{" "}
+            contributing to innovative projects, and partnering with people who
+            prioritize <span>teamwork</span>.{" "}
           </p>
           <p />
           <p
