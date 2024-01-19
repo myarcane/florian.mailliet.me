@@ -44,7 +44,7 @@ export const About = ({ id, data }) => {
               transitionDelay: "600ms",
             }}
           >
-            I am a <span>web developer</span> based in Toronto 📍
+            I am a <span>web developer</span> based in Vancouver 📍
           </p>
           <p
             style={{
