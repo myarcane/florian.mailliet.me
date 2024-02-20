@@ -18,3 +18,4 @@ Built using React & Gatsby.
 ## TODO
 
 - [ ] Migrate to next.js instead of Gatsby
+- [ ] Add analytics
