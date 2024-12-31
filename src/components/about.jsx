@@ -50,7 +50,7 @@ export const About = ({ id, data }) => {
             style={{
               transitionDelay: "650ms",
             }}
-          >
+          > 
             In early <span>2023</span>, I became a new Canadian permanent
             resident. Before that, I was located in the south of France and held
             the position of Senior Frontend Engineer at{" "}
@@ -62,7 +62,15 @@ export const About = ({ id, data }) => {
             >
               dailymotion
             </a>
-            .
+            . Currently working with an amazing team at{" "}
+            <a
+              href="https://www.dayforce.com/"
+              target="_blank"
+              rel="noreferrer nofollow"
+              onTouchEnd={() => {}}
+            >
+              Dayforce
+            </a>
           </p>
           <p
             style={{
