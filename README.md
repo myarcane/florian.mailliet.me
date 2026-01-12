@@ -17,5 +17,5 @@ Built using React & Gatsby.
 
 ## TODO
 
-- [ ] Migrate to next.js instead of Gatsby
+- [ ] Tech stack is completely outdated and I would need to migrate to a more simple static site. Currently the only way to build the project is to downgrade to node 16.12.0 :/.
 - [ ] Add analytics
