@@ -20,7 +20,7 @@
     "gatsby-plugin-sharp": "^4.11.0",
     "gatsby-plugin-split-css": "^2.0.3",
     "gatsby-source-filesystem": "^4.11.0",
-    "gatsby-transformer-remark": "^5.11.0",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^4.11.0",
     "intersection-observer": "^0.7.0",
     "js-base64": "^3.7.5",
